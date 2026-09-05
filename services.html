@@ -536,8 +536,21 @@
   @media(max-width:760px){.copyright{margin-top:12px;}}
 </style><style>
   /* ===== SERVICES PAGE ===== */
-  /* hero 完全沿用 index.html 的 .hero（100svh + 影片背景 + .hero-copy top:17%），
-     不做任何覆寫——先前覆寫成 78svh 會讓 .hero-copy 與 bottom:9% 的 .hero-cta 擠在一起。 */
+  /* hero 沿用 index.html 的 .hero，只換背景圖為 TPE BG.png（與 innoVEX 案例頁同一張）。
+     🔴 高度、.hero-copy 與 .hero-cta 的定位一律不覆寫——先前覆寫成 78svh
+        會讓 .hero-copy 與 bottom:9% 的 .hero-cta 擠在一起。 */
+  .svc-hero{
+    background:#04091c none center right / cover no-repeat;
+    /* 第一行給不支援 image-set() 的舊瀏覽器；第二行讓支援的依格式挑 WebP。
+       原始 TPE BG.png 為 2,029 KB，壓縮後 WebP 143 KB（↓93%）。
+       原始 PNG 保留不動，innoVEX 案例頁仍在引用它。 */
+    background-image:url('tpe-bg.jpg');
+    background-image:image-set(url('tpe-bg.webp') type('image/webp'), url('tpe-bg.jpg') type('image/jpeg'));
+  }
+  @media(max-width:760px){
+    /* 直式螢幕裁切較多，錨點往左移讓天際線留在畫面內 */
+    .svc-hero{background-position:60% center;}
+  }
 
   .svc-sec{padding:84px 0 0;}
   .svc-sec:last-of-type{padding-bottom:20px;}
@@ -662,10 +675,7 @@
   </div>
 </header>
 
-<section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg">
-    <source src="hero-bg-clean.mp4" type="video/mp4">
-  </video>
+<section class="hero svc-hero">
   <div class="hero-tint"></div>
   <div class="hero-fold">
     <div class="hero-inner wrap">
