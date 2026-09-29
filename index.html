@@ -196,7 +196,7 @@
   @media(max-width:760px){.hero-intro{padding-top:48px; padding-bottom:20px;} .hero-intro.wrap{padding-left:36px; padding-right:36px;}}
   .hero-intro .lede{
     max-width:1020px; margin:0 auto; color:var(--muted); font-size:17px; line-height:1.75;
-    font-family:"Helvetica Neue","Noto Sans TC",sans-serif; text-align:center;
+    font-family:"Helvetica Neue","Noto Sans TC",sans-serif; text-align:center; text-wrap:pretty;
     opacity:0; transform:translateY(24px);
     transition:opacity 1.1s cubic-bezier(.22,1,.36,1), transform 1.1s cubic-bezier(.22,1,.36,1);
   }
@@ -466,8 +466,26 @@
   @media(max-width:760px){.cap-col-head{margin-top:40px;} .cap-col:first-child .cap-col-head{margin-top:0;}}
 
   /* WORK — flagship deep-dive cards (mirrors DaoAI's Visual Intelligence product cards) */
-  .flagship-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px 48px; margin-bottom:48px;}
-  @media(max-width:760px){.flagship-grid{grid-template-columns:1fr;}}
+  .work-category{margin-bottom:72px;}
+  .work-category:last-child{margin-bottom:0;}
+  .work-category-head{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;
+    padding-bottom:16px; border-bottom:1px solid var(--line); margin-bottom:36px;
+  }
+  .work-category-title{
+    display:flex; align-items:center; gap:10px;
+  }
+  .category-dot{
+    width:8px; height:8px; background:#d97706; border-radius:50%; display:inline-block;
+  }
+  .category-name{
+    font-size:16px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink);
+  }
+  .work-category-sub{
+    font-size:12px; letter-spacing:1px; color:var(--muted); text-transform:uppercase;
+  }
+  .flagship-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px 48px; margin-bottom:0;}
+  @media(max-width:760px){.flagship-grid{grid-template-columns:1fr; gap:32px;}}
   .flagship-item{border-top:2px solid var(--ink); padding-top:22px;}
   .flagship-item.is-primary{grid-column:1/-1;}
   .flagship-label{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink); font-weight:700; margin-bottom:14px;}
@@ -575,7 +593,7 @@
 
 <section class="hero-intro wrap">
   <p class="lede">
-    從 HTC 的第一線教育訓練、澳洲的零售與人員制度，到工業 AI 的產品 GTM、CRM 與 AI 工作流，我一直在做同一件事：<strong>把難懂的新技術翻譯成現場願意採用、每天真正會用的方式。</strong>我能連結產品、通路、第一線與決策者，讓技術不只被看見，而是產生可衡量的商業結果。
+    從 HTC 的第一線教育訓練、澳洲的零售與人員制度，到工業 AI 的產品 GTM、CRM 與 AI 工作流，我一直在做同一件事：<strong>把難懂的新技術翻譯成現場願意採用、每天真正會用的方式。</strong>我連結產品、通路、第一線與決策者，讓技術不只被看見，更落實為可衡量的<span style="white-space:nowrap">商業成果。</span>
   </p>
   <div class="meta-row">
     <div><div class="num">Experience</div><div class="val">13年 技術落地經驗</div></div>
@@ -593,163 +611,192 @@
     </div>
   </div>
 
-  <div class="flagship-grid">
+  <!-- CATEGORY 1: 規劃策劃 -->
+  <div class="work-category work-cat-planning">
+    <div class="work-category-head">
+      <div class="work-category-title">
+        <span class="category-dot"></span>
+        <span class="category-name">規劃策劃</span>
+      </div>
+      <div class="work-category-sub">商業策略與運作架構 · Strategic Planning &amp; Operations</div>
+    </div>
+    <div class="flagship-grid">
+      <div class="flagship-item is-primary">
+        <div class="flagship-label">Strategy &amp; Ops · 01</div>
+        <a class="thumb" href="https://www.thermoverse.com/" target="_blank" rel="noopener noreferrer" aria-label="查看 ThermoVerse 官網與商業架構">
+          <img src="thumb-thermoverse.png" alt="ThermoVerse 官網首頁與深科技商業化架構" class="active">
+        </a>
+        <div class="tag-row"><span class="tag">Deep Tech GTM</span><span class="tag">Use Case Architecture</span><span class="tag">Commercial Touchpoints</span><span class="tag">Exhibition GTM</span></div>
+        <h3>ThermoVerse 深科技商業化與 GTM</h3>
+        <div class="story">
+          <p>為美台潔淨能源新創統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與建築能源技術，拆解為「現行服務」與「未來硬體」雙支柱；獨立梳理商辦、校園、飯店與統包商等使用情境（Use Cases），將硬核物理規格轉化為可量化財務回報。同時串聯 Futex 未來科技展現場接洽與雙語數位樞紐，建立從展會到預約評估的商務漏斗。</p>
+        </div>
+      </div>
 
-    <div class="flagship-item is-primary">
-      <div class="flagship-label">Flagship Case 01</div>
-      <a class="thumb thumb-carousel" href="https://www.daoai.com/" target="_blank" rel="noopener">
-        <img src="thumb-daoai.png" alt="DaoAI 官網首頁" class="active">
-        <img src="thumb-daoai-tw.png" alt="DaoAI 官網首頁 · 繁體中文版">
-        <img src="thumb-daoai-cn.png" alt="DaoAI 官網首頁 · 簡體中文版">
-        <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
-        <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
-      </a>
-      <div class="tag-row"><span class="tag">UI/UX</span><span class="tag">Information Architecture</span><span class="tag">Brand Visual System</span><span class="tag">Web Design</span></div>
-      <h3>DaoAI 官網、Blog &amp; SEO/GEO</h3>
-      <div class="story">
-        <p>資訊架構、頁面版型、視覺層級、品牌色彩與漏斗設計，全部由一個人規劃設計並利用AI工具，實際產出網站的UI/UX、排版、多媒體內容。</p>
-        <ul class="impact-list">
-          <li>以 <strong>SEO/GEO</strong> 把官網與內容變成 inbound 線索入口。</li>
-          <li>網站獲得 <strong>美國富士康、中國 Dell、Inventec、NXP、Honeywell Aerospace、Advantech</strong> 等製造與科技客戶主動填單。</li>
-        </ul>
-        <div class="performance-proof">
-          <figure class="performance-shot">
-            <img src="seo-performance-gsc.webp" alt="DaoAI Google Search Console 近三個月台灣搜尋成效">
-          </figure>
-          <div class="performance-summary">
-            <div>
-              <div class="performance-kicker">SEO Performance</div>
-              <div class="performance-context">Google Search Console · 近三個月 · 台灣</div>
-            </div>
-            <div class="performance-metrics">
-              <div class="performance-metric"><span class="performance-value">203</span><span class="performance-label">自然搜尋點擊</span></div>
-              <div class="performance-metric"><span class="performance-value">3.22K</span><span class="performance-label">搜尋曝光</span></div>
-              <div class="performance-metric"><span class="performance-value">6.3%</span><span class="performance-label">平均點閱率</span></div>
-              <div class="performance-metric"><span class="performance-value">7.3</span><span class="performance-label">平均排名</span></div>
+      <div class="flagship-item">
+        <div class="flagship-label">Strategy &amp; Ops · 02</div>
+        <div class="thumb thumb-carousel">
+          <img src="thumb-crm.png" alt="CRM 系統 Form Submissions 儀表板" class="active">
+          <img src="thumb-crm-2.png" alt="LinkedIn發文AI Agent · 靈感輸入介面">
+          <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
+          <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
+        </div>
+        <div class="tag-row"><span class="tag">Internal CRM</span><span class="tag">AI Agent</span><span class="tag">Human-in-the-loop</span></div>
+        <h3>CRM系統 &amp; LinkedIn發文AI Agent</h3>
+        <div class="story">
+          <p>依照公司規模與需求，打造內部專用CRM系統，並建置LinkedIn發文AI Agent，整合自動排程與AI靈感庫，將AI融入日常工作流中。</p>
+        </div>
+      </div>
+
+      <div class="flagship-item">
+        <div class="flagship-label">Strategy &amp; Ops · 03 · 個人專案</div>
+        <a class="thumb" href="https://n239.xyz/glycowave/" target="_blank" rel="noopener noreferrer" aria-label="開啟 GlycoWave AI 飲食助手">
+          <img src="thumb-glycowave-ui.jpg" alt="GlycoWave AI 飲食助手的產品介面與手機展示">
+        </a>
+        <div class="tag-row"><span class="tag">個人專案</span><span class="tag">Product Design</span><span class="tag">AI Application</span></div>
+        <h3>GlycoWave AI 飲食助手</h3>
+        <div class="story">
+          <p>個人獨立發起與打造的 AI 飲食助手。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。目前為可開啟的網頁版，App Store 即將上線。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 2: 行銷規劃 -->
+  <div class="work-category work-cat-marketing">
+    <div class="work-category-head">
+      <div class="work-category-title">
+        <span class="category-dot"></span>
+        <span class="category-name">行銷規劃</span>
+      </div>
+      <div class="work-category-sub">行銷策略與 GTM 推進 · Marketing Strategy &amp; GTM</div>
+    </div>
+    <div class="flagship-grid">
+      <div class="flagship-item is-primary">
+        <div class="flagship-label">Marketing &amp; GTM · 01</div>
+        <a class="thumb thumb-carousel" href="https://www.daoai.com/" target="_blank" rel="noopener">
+          <img src="thumb-daoai.png" alt="DaoAI 官網首頁" class="active">
+          <img src="thumb-daoai-tw.png" alt="DaoAI 官網首頁 · 繁體中文版">
+          <img src="thumb-daoai-cn.png" alt="DaoAI 官網首頁 · 簡體中文版">
+          <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
+          <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
+        </a>
+        <div class="tag-row"><span class="tag">UI/UX</span><span class="tag">Information Architecture</span><span class="tag">Brand Visual System</span><span class="tag">Web Design</span></div>
+        <h3>DaoAI 官網、Blog &amp; SEO/GEO</h3>
+        <div class="story">
+          <p>資訊架構、頁面版型、視覺層級、品牌色彩與漏斗設計，全部由一個人規劃設計並利用AI工具，實際產出網站的UI/UX、排版、多媒體內容。</p>
+          <ul class="impact-list">
+            <li>以 <strong>SEO/GEO</strong> 把官網與內容變成 inbound 線索入口。</li>
+            <li>網站獲得 <strong>美國富士康、中國 Dell、Inventec、NXP、Honeywell Aerospace、Advantech</strong> 等製造與科技客戶主動填單。</li>
+          </ul>
+          <div class="performance-proof">
+            <figure class="performance-shot">
+              <img src="seo-performance-gsc.webp" alt="DaoAI Google Search Console 近三個月台灣搜尋成效">
+            </figure>
+            <div class="performance-summary">
+              <div>
+                <div class="performance-kicker">SEO Performance</div>
+                <div class="performance-context">Google Search Console · 近三個月 · 台灣</div>
+              </div>
+              <div class="performance-metrics">
+                <div class="performance-metric"><span class="performance-value">203</span><span class="performance-label">自然搜尋點擊</span></div>
+                <div class="performance-metric"><span class="performance-value">3.22K</span><span class="performance-label">搜尋曝光</span></div>
+                <div class="performance-metric"><span class="performance-value">6.3%</span><span class="performance-label">平均點閱率</span></div>
+                <div class="performance-metric"><span class="performance-value">7.3</span><span class="performance-label">平均排名</span></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="flagship-item">
-      <div class="flagship-label">Flagship Case 02</div>
-      <a class="thumb" href="https://www.thermoverse.com/" target="_blank" rel="noopener noreferrer" aria-label="查看 ThermoVerse 官網與商業架構">
-        <img src="thumb-thermoverse.webp" alt="ThermoVerse 官網首頁與深科技商業化架構" class="active">
-      </a>
-      <div class="tag-row"><span class="tag">Deep Tech GTM</span><span class="tag">Use Case Architecture</span><span class="tag">Commercial Touchpoints</span><span class="tag">Exhibition GTM</span></div>
-      <h3>ThermoVerse｜深科技商業化架構與 Futex 展會 GTM 體系</h3>
-      <div class="story">
-        <p>為美台潔淨能源新創統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與建築能源技術，拆解為「現行服務」與「未來硬體」雙支柱；獨立梳理商辦、校園、飯店與統包商等使用情境（Use Cases），將硬核物理規格轉化為可量化財務回報。同時串聯 Futex 未來科技展現場接洽與雙語數位樞紐，建立從展會到預約評估的商務漏斗。</p>
+      <div class="flagship-item">
+        <div class="flagship-label">Marketing &amp; GTM · 02</div>
+        <a class="thumb" href="innovex-case-study.html" aria-label="查看 innoVEX 活動落地頁封存作品">
+          <img src="thumb-innovex-2.png" alt="DaoAI innoVEX 活動落地頁" class="active" style="object-position:center 100%">
+        </a>
+        <div class="tag-row"><span class="tag">Product Page</span><span class="tag">Campaign Landing Page</span><span class="tag">SEO/GEO</span></div>
+        <h3>innoVEX 活動落地頁</h3>
+        <div class="story">
+          <p>DaoAI 參展 InnoVEX 2026 的展前活動落地頁，繁簡雙語。以 Hero、展位看點、產品深入到預約表單的單頁漏斗，把搜尋、GEO 與展會宣傳流量收斂成 30 分鐘專屬時段預約；頁面配置 SEO/GEO metadata 與活動結構化資料，讓展位資訊能被搜尋引擎與 AI 摘要正確引用。</p>
+        </div>
+      </div>
+
+      <div class="flagship-item">
+        <div class="flagship-label">Marketing &amp; GTM · 03</div>
+        <a class="thumb" href="skyvision-case-study.html" aria-label="查看 SkyVision 產品頁封存作品">
+          <img src="thumb-skyvision.png" alt="DaoAI SkyVision 產品頁" class="active" style="object-position:center 12%">
+        </a>
+        <div class="tag-row"><span class="tag">Product Page</span><span class="tag">Information Architecture</span><span class="tag">Technical Storytelling</span></div>
+        <h3>SkyVision AI監控產品頁</h3>
+        <div class="story">
+          <p>以大量圖片呈現產品使用情境與功能，轉譯成客戶能快速理解的產品敘事。任職DaoAI期間製作的英文產品頁，以資訊架構、情境視覺與技術轉譯，讓客戶快速理解無程式碼AI監控平台；原頁已下線，現以移除表單與追蹤功能的封存作品頁呈現。</p>
+        </div>
       </div>
     </div>
-
-    <div class="flagship-item">
-      <div class="flagship-label">Flagship Case 03</div>
-      <a class="thumb" href="skyvision-case-study.html" aria-label="查看 SkyVision 產品頁封存作品">
-        <img src="thumb-skyvision.png" alt="DaoAI SkyVision 產品頁" class="active" style="object-position:center 12%">
-      </a>
-      <div class="tag-row"><span class="tag">Product Page</span><span class="tag">Information Architecture</span><span class="tag">Technical Storytelling</span></div>
-      <h3>SkyVision AI監控產品頁</h3>
-      <div class="story">
-        <p>以大量圖片呈現產品使用情境與功能，轉譯成客戶能快速理解的產品敘事。任職DaoAI期間製作的英文產品頁，以資訊架構、情境視覺與技術轉譯，讓客戶快速理解無程式碼AI監控平台；原頁已下線，現以移除表單與追蹤功能的封存作品頁呈現。</p>
-      </div>
-    </div>
-
-    <div class="flagship-item">
-      <div class="flagship-label">Flagship Case 04</div>
-      <a class="thumb" href="innovex-case-study.html" aria-label="查看 innoVEX 活動落地頁封存作品">
-        <img src="thumb-innovex-2.png" alt="DaoAI innoVEX 活動落地頁" class="active" style="object-position:center 100%">
-      </a>
-      <div class="tag-row"><span class="tag">Product Page</span><span class="tag">Campaign Landing Page</span><span class="tag">SEO/GEO</span></div>
-      <h3>innoVEX 活動落地頁</h3>
-      <div class="story">
-        <p>DaoAI 參展 InnoVEX 2026 的展前活動落地頁，繁簡雙語。以 Hero、展位看點、產品深入到預約表單的單頁漏斗，把搜尋、GEO 與展會宣傳流量收斂成 30 分鐘專屬時段預約；頁面配置 SEO/GEO metadata 與活動結構化資料，讓展位資訊能被搜尋引擎與 AI 摘要正確引用。</p>
-      </div>
-    </div>
-
-    <div class="flagship-item">
-      <div class="flagship-label">Flagship Case 05</div>
-      <div class="thumb thumb-carousel">
-        <img src="thumb-crm.png" alt="CRM 系統 Form Submissions 儀表板" class="active">
-        <img src="thumb-crm-2.png" alt="LinkedIn發文AI Agent · 靈感輸入介面">
-        <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
-        <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
-      </div>
-      <div class="tag-row"><span class="tag">Vibe Coding</span><span class="tag">AI Agent</span><span class="tag">Human-in-the-loop</span></div>
-      <h3>CRM系統 &amp; LinkedIn發文AI Agent</h3>
-      <div class="story">
-        <p>依照公司規模與需求，以vibe coding的方式打造內部專用CRM系統，另外建了一個LinkedIn發文AI Agent，整合了LinkedIn自動發文與AI靈感庫等功能，將AI融入工作流中。</p>
-      </div>
-    </div>
-
-    <div class="flagship-item">
-      <div class="flagship-label">Flagship Case 06</div>
-      <a class="thumb" href="https://n239.xyz/glycowave/" target="_blank" rel="noopener noreferrer" aria-label="開啟 GlycoWave AI 飲食助手">
-        <img src="thumb-glycowave-ui.jpg" alt="GlycoWave AI 飲食助手的產品介面與手機展示">
-      </a>
-      <div class="tag-row"><span class="tag">Product Design</span><span class="tag">AI Application</span><span class="tag">Vibe Coding</span></div>
-      <h3>GlycoWave AI 飲食助手</h3>
-      <div class="story">
-        <p>為外食上班族打造的 AI 飲食助手。使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；目前為可開啟的網頁版，App Store 即將上線。</p>
-      </div>
-    </div>
-
   </div>
 
-  <div class="more-work-head">More Work</div>
-  <div class="work-grid">
-
-    <div class="work-item">
-      <div class="thumb thumb-carousel">
-        <img src="thumb-apex-design.png" alt="APEX IPC 2026 展位背板設計輸出" class="active" style="object-position:center 70%">
-        <img src="thumb-apex-2.jpg" alt="APEX IPC 2026 展位現場照片" style="object-position:center 15%">
-        <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
-        <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
+  <!-- CATEGORY 3: 多媒體產出 -->
+  <div class="work-category work-cat-media">
+    <div class="work-category-head">
+      <div class="work-category-title">
+        <span class="category-dot"></span>
+        <span class="category-name">多媒體產出</span>
       </div>
-      <div class="tag-row"><span class="tag">Exhibition Design</span><span class="tag">Affinity</span><span class="tag">Backdrop Design</span><span class="tag">Brand System</span></div>
-      <h3>展會平面輸出與現場視覺 — APEX IPC 2026</h3>
-      <div class="story">
-        <p>主導公司在APEX IPC 2026的展位設計（含背板設計輸出），並負責innoVex Computex現場展示影片與相關宣傳素材。</p>
-      </div>
+      <div class="work-category-sub">視覺設計與動態內容 · Multimedia &amp; Creative Production</div>
     </div>
+    <div class="work-grid">
 
-    <div class="work-item">
-      <div class="thumb">
-        <video controls preload="metadata" poster="thumb-ai-programming-cn-v2.jpg" playsinline style="object-position:center 40%">
-          <source src="daoai-ai-programming-cn-v2.mp4" type="video/mp4">
-        </video>
+      <div class="work-item">
+        <div class="thumb thumb-carousel">
+          <img src="thumb-apex-design.png" alt="APEX IPC 2026 展位背板設計輸出" class="active" style="object-position:center 70%">
+          <img src="thumb-apex-2.jpg" alt="APEX IPC 2026 展位現場照片" style="object-position:center 15%">
+          <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
+          <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
+        </div>
+        <div class="tag-row"><span class="tag">Exhibition Design</span><span class="tag">Affinity</span><span class="tag">Backdrop Design</span><span class="tag">Brand System</span></div>
+        <h3>展會平面輸出與現場視覺 — APEX IPC 2026</h3>
+        <div class="story">
+          <p>主導公司在APEX IPC 2026的展位設計（含背板設計輸出），並負責innoVex Computex現場展示影片與相關宣傳素材。</p>
+        </div>
       </div>
-      <div class="tag-row"><span class="tag">Video</span><span class="tag">CapCut</span><span class="tag">AI生成畫面混剪</span></div>
-      <h3>產品與品牌行銷影片</h3>
-      <div class="story">
-        <p>包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，一起剪進同一支片子裡。作品包含產品介紹/短影片等形式。</p>
+
+      <div class="work-item">
+        <div class="thumb">
+          <video controls preload="metadata" poster="thumb-ai-programming-cn-v2.jpg" playsinline style="object-position:center 40%">
+            <source src="daoai-ai-programming-cn-v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="tag-row"><span class="tag">Video</span><span class="tag">CapCut</span><span class="tag">AI生成畫面混剪</span></div>
+        <h3>產品與品牌行銷影片</h3>
+        <div class="story">
+          <p>包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，一起剪進同一支片子裡。作品包含產品介紹/短影片等形式。</p>
+        </div>
       </div>
+
+      <div class="work-item">
+        <div class="thumb thumb-carousel">
+          <img src="thumb-htc-brochure.jpg" alt="HTC U12+ 產品特點一頁式宣傳品" class="active" style="object-position:center 18%">
+          <img src="thumb-htc-brochure-1.jpg" alt="HTC U12+ 競品規格比較頁" style="object-position:center 18%">
+          <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
+          <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
+        </div>
+        <div class="tag-row"><span class="tag">Print &amp; Layout</span><span class="tag">Canva</span><span class="tag">Illustrator</span></div>
+        <h3>產品宣傳品設計</h3>
+        <div class="story">
+          <p>針對銷售人員設計之銷售素材，整合技術規格、品牌調性、銷售重點，助於銷售人員介紹產品。</p>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="thumb"><img src="thumb-keynote.png" alt="Beyond Boundaries: Unleashing Business Opportunities in XR and Metaverse Frontier 簡報封面" style="object-position:center 70%"></div>
+        <div class="tag-row"><span class="tag">Keynote</span><span class="tag">Presentation Design</span><span class="tag">XR / Metaverse</span></div>
+        <h3>HTC 研討會簡報</h3>
+        <div class="story">
+          <p>研討會簡報，向HK Cyberport夥伴說明XR與Metaverse領域的商業機會。</p>
+        </div>
+      </div>
+
     </div>
-
-    <div class="work-item">
-      <div class="thumb thumb-carousel">
-        <img src="thumb-htc-brochure.jpg" alt="HTC U12+ 產品特點一頁式宣傳品" class="active" style="object-position:center 18%">
-        <img src="thumb-htc-brochure-1.jpg" alt="HTC U12+ 競品規格比較頁" style="object-position:center 18%">
-        <button type="button" class="thumb-arrow prev" aria-label="上一張">&#8249;</button>
-        <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
-      </div>
-      <div class="tag-row"><span class="tag">Print &amp; Layout</span><span class="tag">Canva</span><span class="tag">Illustrator</span></div>
-      <h3>產品宣傳品設計</h3>
-      <div class="story">
-        <p>針對銷售人員設計之銷售素材，整合技術規格、品牌調性、銷售重點，助於銷售人員介紹產品。</p>
-      </div>
-    </div>
-
-    <div class="work-item">
-      <div class="thumb"><img src="thumb-keynote.png" alt="Beyond Boundaries: Unleashing Business Opportunities in XR and Metaverse Frontier 簡報封面" style="object-position:center 70%"></div>
-      <div class="tag-row"><span class="tag">Keynote</span><span class="tag">Presentation Design</span><span class="tag">XR / Metaverse</span></div>
-      <h3>HTC 研討會簡報</h3>
-      <div class="story">
-        <p>研討會簡報，向HK Cyberport夥伴說明XR與Metaverse領域的商業機會。</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -926,14 +973,19 @@
         text: {
           'h1.display': '<span class="hero-first-line">讓技術產品被看懂、被找到</span><span class="hero-second-line">在市場上被真正採用</span>',
           '.hero-cta': '查看作品 →',
-          '.hero-intro .lede': '從 HTC 的第一線教育訓練、澳洲的零售與人員制度，到工業 AI 的產品 GTM、CRM 與 AI 工作流，我一直在做同一件事：<strong>把難懂的新技術翻譯成現場願意採用、每天真正會用的方式。</strong>我能連結產品、通路、第一線與決策者，讓技術不只被看見，而是產生可衡量的商業結果。',
+          '.hero-intro .lede': '從 HTC 的第一線教育訓練、澳洲的零售與人員制度，到工業 AI 的產品 GTM、CRM 與 AI 工作流，我一直在做同一件事：<strong>把難懂的新技術翻譯成現場願意採用、每天真正會用的方式。</strong>我連結產品、通路、第一線與決策者，讓技術不只被看見，更落實為可衡量的<span style="white-space:nowrap">商業成果。</span>',
           '#work h2': '代表作品',
           '#experience h2': '我如何讓技術被真正採用',
           '.experience-intro': '從把技術講成第一線說得出口的話，到設計流程、推動區域 GTM，再到建置 AI 工作流；每一段經歷都在回答同一個問題：怎麼讓人真的願意用。',
           '#skills h2': '核心能力與實作工具',
           '#help h2': '我讓技術落地的方式',
           '#contact h2': '一起聊聊<br>下一個挑戰',
-          '.more-work-head': 'More Work'
+          '.work-cat-planning .category-name': '規劃策劃',
+          '.work-cat-planning .work-category-sub': '商業策略與運作架構 · Strategic Planning &amp; Operations',
+          '.work-cat-marketing .category-name': '行銷規劃',
+          '.work-cat-marketing .work-category-sub': '行銷策略與 GTM 推進 · Marketing Strategy &amp; GTM',
+          '.work-cat-media .category-name': '多媒體產出',
+          '.work-cat-media .work-category-sub': '視覺設計與動態內容 · Multimedia &amp; Creative Production'
         },
         groups: {
           'header .navlinks a': ['作品', '經歷', '技能', '服務', '聯絡我'],
@@ -956,14 +1008,15 @@
             '不是工程師，但能獨立打造CRM系統、具備human-in-the-loop審核機制的LinkedIn發文AI Agent，以及公司官網。',
             '從資訊架構、版面設計到影片剪輯，一個人完成從內容到視覺的產出，不必等工程師或外包設計師接手。'
           ],
-          '.flagship-item h3': ['DaoAI 官網、Blog &amp; SEO/GEO', 'ThermoVerse｜深科技商業化架構與 Futex 展會 GTM 體系', 'SkyVision AI監控產品頁', 'innoVEX 活動落地頁', 'CRM系統 &amp; LinkedIn發文AI Agent', 'GlycoWave AI 飲食助手'],
+          '.flagship-label': ['Strategy &amp; Ops · 01', 'Strategy &amp; Ops · 02', 'Strategy &amp; Ops · 03 · 個人專案', 'Marketing &amp; GTM · 01', 'Marketing &amp; GTM · 02', 'Marketing &amp; GTM · 03'],
+          '.flagship-item h3': ['ThermoVerse 深科技商業化與 GTM', 'CRM系統 &amp; LinkedIn發文AI Agent', 'GlycoWave AI 飲食助手', 'DaoAI 官網、Blog &amp; SEO/GEO', 'innoVEX 活動落地頁', 'SkyVision AI監控產品頁'],
           '.flagship-item .story p': [
-            '資訊架構、頁面版型、視覺層級、品牌色彩與漏斗設計，全部由一個人規劃設計並利用AI工具，實際產出網站的UI/UX、排版、多媒體內容。',
             '為美台潔淨能源新創統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與建築能源技術，拆解為「現行服務」與「未來硬體」雙支柱；獨立梳理商辦、校園、飯店與統包商等使用情境（Use Cases），將硬核物理規格轉化為可量化財務回報。同時串聯 Futex 未來科技展現場接洽與雙語數位樞紐，建立從展會到預約評估的商務漏斗。',
-            '以大量圖片呈現產品使用情境與功能，轉譯成客戶能快速理解的產品敘事。任職DaoAI期間製作的英文產品頁，以資訊架構、情境視覺與技術轉譯，讓客戶快速理解無程式碼AI監控平台；原頁已下線，現以移除表單與追蹤功能的封存作品頁呈現。',
+            '依照公司規模與需求，打造內部專用CRM系統，並建置LinkedIn發文AI Agent，整合自動排程與AI靈感庫，將AI融入日常工作流中。',
+            '個人獨立發起與打造的 AI 飲食助手。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。目前為可開啟的網頁版，App Store 即將上線。',
+            '資訊架構、頁面版型、視覺層級、品牌色彩與漏斗設計，全部由一個人規劃設計並利用AI工具，實際產出網站的UI/UX、排版、多媒體內容。',
             'DaoAI 參展 InnoVEX 2026 的展前活動落地頁，繁簡雙語。以 Hero、展位看點、產品深入到預約表單的單頁漏斗，把搜尋、GEO 與展會宣傳流量收斂成 30 分鐘專屬時段預約；頁面配置 SEO/GEO metadata 與活動結構化資料，讓展位資訊能被搜尋引擎與 AI 摘要正確引用。',
-            '依照公司規模與需求，以vibe coding的方式打造內部專用CRM系統，另外建了一個LinkedIn發文AI Agent，整合了LinkedIn自動發文與AI靈感庫等功能，將AI融入工作流中。',
-            '為外食上班族打造的 AI 飲食助手。使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；目前為可開啟的網頁版，App Store 即將上線。'
+            '以大量圖片呈現產品使用情境與功能，轉譯成客戶能快速理解的產品敘事。任職DaoAI期間製作的英文產品頁，以資訊架構、情境視覺與技術轉譯，讓客戶快速理解無程式碼AI監控平台；原頁已下線，現以移除表單與追蹤功能的封存作品頁呈現。'
           ],
           '.impact-list li': [
             '以 <strong>SEO/GEO</strong> 把官網與內容變成 inbound 線索入口。',
@@ -978,7 +1031,7 @@
             '針對銷售人員設計之銷售素材，整合技術規格、品牌調性、銷售重點，助於銷售人員介紹產品。',
             '研討會簡報，向HK Cyberport夥伴說明XR與Metaverse領域的商業機會。'
           ],
-          '#work .tag': ['UI/UX', 'Information Architecture', 'Brand Visual System', 'Web Design', 'Deep Tech GTM', 'Use Case Architecture', 'Commercial Touchpoints', 'Exhibition GTM', 'Product Page', 'Information Architecture', 'Technical Storytelling', 'Product Page', 'Campaign Landing Page', 'SEO/GEO', 'Vibe Coding', 'AI Agent', 'Human-in-the-loop', 'Product Design', 'AI Application', 'Vibe Coding', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI生成畫面混剪', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
+          '#work .tag': ['Deep Tech GTM', 'Use Case Architecture', 'Commercial Touchpoints', 'Exhibition GTM', 'Internal CRM', 'AI Agent', 'Human-in-the-loop', '個人專案', 'Product Design', 'AI Application', 'UI/UX', 'Information Architecture', 'Brand Visual System', 'Web Design', 'Product Page', 'Campaign Landing Page', 'SEO/GEO', 'Product Page', 'Information Architecture', 'Technical Storytelling', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI生成畫面混剪', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
           '.current-badge': ['現職'],
           '.titem .period': ['2025.01 – 2026.07', '2023.05 – 2024.06', '2022.03 – 2023.04', '2020.06 – 2022.03', '2013.11 – 2019.09'],
           '.titem li': [
@@ -1026,7 +1079,12 @@
           '#skills h2': 'Core Capabilities &amp; Execution Toolkit',
           '#help h2': 'How I make technology land',
           '#contact h2': 'Let\'s talk about<br>the next challenge.',
-          '.more-work-head': 'More Work'
+          '.work-cat-planning .category-name': 'Strategic Planning',
+          '.work-cat-planning .work-category-sub': 'Operations &amp; Systems Architecture',
+          '.work-cat-marketing .category-name': 'Marketing &amp; GTM',
+          '.work-cat-marketing .work-category-sub': 'Strategy, Narrative &amp; Acquisition',
+          '.work-cat-media .category-name': 'Multimedia Production',
+          '.work-cat-media .work-category-sub': 'Visual Design &amp; Motion Assets'
         },
         groups: {
           'header .navlinks a': ['Work', 'Experience', 'Skills', 'Services', 'Contact Me'],
@@ -1049,14 +1107,15 @@
             'I am not an engineer, but I can independently build internal CRM systems, human-in-the-loop LinkedIn posting AI Agents, and company websites.',
             'From information architecture and layout design to video editing, I can produce content and visuals without waiting on engineering or outsourced design.'
           ],
-          '.flagship-item h3': ['DaoAI Website, Blog &amp; SEO/GEO', 'ThermoVerse | Commercializing Deep-Tech Invention &amp; Futex GTM Architecture', 'SkyVision AI Surveillance Product Page', 'innoVEX Campaign Landing Page', 'CRM System &amp; LinkedIn Posting AI Agent', 'GlycoWave AI Nutrition Assistant'],
+          '.flagship-label': ['Strategy &amp; Ops · 01', 'Strategy &amp; Ops · 02', 'Strategy &amp; Ops · 03 · Independent Project', 'Marketing &amp; GTM · 01', 'Marketing &amp; GTM · 02', 'Marketing &amp; GTM · 03'],
+          '.flagship-item h3': ['ThermoVerse Deep-Tech Commercialization &amp; GTM', 'CRM System &amp; LinkedIn Posting AI Agent', 'GlycoWave AI Nutrition Assistant', 'DaoAI Website, Blog &amp; SEO/GEO', 'innoVEX Campaign Landing Page', 'SkyVision AI Surveillance Product Page'],
           '.flagship-item .story p': [
-            'I planned the information architecture, page layouts, visual hierarchy, brand colors, and funnel design, then used AI tools to execute the website UI/UX, layout, and multimedia content.',
             'Architected the deep-tech commercialization for a US-Taiwan clean-tech venture. Structured its patented drop-ceiling thermal battery (LATCHES™) and building performance engineering into two distinct pillars: turnkey services and active hardware. Independently defined target use cases across commercial buildings, campuses, hotels, and contractors—translating engineering specs into quantifiable ROI. Integrated the Futex exhibition narrative with a bilingual digital platform to convert discovery into scheduled assessments.',
-            'Built an image-led product page that presents product use cases and features through concrete visuals, translating them into a product narrative customers can understand quickly. Created this English product page while working at DaoAI. Information architecture, scenario-led visuals, and technical translation made the no-code AI surveillance platform easier to understand. The original page is offline; this portfolio archive removes forms and tracking.',
+            'Built a dedicated internal CRM system and a LinkedIn posting AI Agent tailored to company needs, integrating automated scheduling and an AI inspiration library into daily operations.',
+            'An independent personal product created from scratch. From product positioning and user journey to UI and web development, I executed every layer independently. Users photograph or describe a meal to understand how food choices correlate with fatigue or brain fog, receiving actionable guidance for their next meal. Live web version active; App Store launch coming soon.',
+            'I planned the information architecture, page layouts, visual hierarchy, brand colors, and funnel design, then used AI tools to execute the website UI/UX, layout, and multimedia content.',
             'Pre-show landing page for DaoAI at InnoVEX 2026, in Traditional and Simplified Chinese. A single-page funnel — hero, booth highlights, product deep-dives, booking form — channels search, GEO, and trade-show traffic into 30-minute private slot bookings. SEO/GEO metadata and event structured data make the booth details citable by search engines and AI summaries.',
-            'Based on company needs, I used vibe coding to build an internal CRM system and a LinkedIn posting AI Agent with automated posting and an AI inspiration library, embedding AI into the workflow.',
-            'An AI nutrition assistant for office workers who eat out. Users photograph or describe a meal to understand how it may relate to afternoon fatigue, cravings, or brain fog, then receive practical guidance for their next meal. I independently completed the product positioning, user flow, interface, and web experience. The web version is live; the App Store release is coming soon.'
+            'Built an image-led product page that presents product use cases and features through concrete visuals, translating them into a product narrative customers can understand quickly. Created this English product page while working at DaoAI. Information architecture, scenario-led visuals, and technical translation made the no-code AI surveillance platform easier to understand. The original page is offline; this portfolio archive removes forms and tracking.'
           ],
           '.impact-list li': [
             'Used <strong>SEO/GEO</strong> to turn the website and content system into an inbound lead channel.',
@@ -1071,7 +1130,7 @@
             'Designed sales enablement materials that connect technical specifications, brand tone, and sales priorities for frontline teams.',
             'Designed a seminar presentation for HK Cyberport partners on business opportunities in XR and the metaverse.'
           ],
-          '#work .tag': ['UI/UX', 'Information Architecture', 'Brand Visual System', 'Web Design', 'Deep Tech GTM', 'Use Case Architecture', 'Commercial Touchpoints', 'Exhibition GTM', 'Product Page', 'Information Architecture', 'Technical Storytelling', 'Product Page', 'Campaign Landing Page', 'SEO/GEO', 'Vibe Coding', 'AI Agent', 'Human-in-the-loop', 'Product Design', 'AI Application', 'Vibe Coding', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI-Generated Mixed Footage', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
+          '#work .tag': ['Deep Tech GTM', 'Use Case Architecture', 'Commercial Touchpoints', 'Exhibition GTM', 'Internal CRM', 'AI Agent', 'Human-in-the-loop', 'Independent Project', 'Product Design', 'AI Application', 'UI/UX', 'Information Architecture', 'Brand Visual System', 'Web Design', 'Product Page', 'Campaign Landing Page', 'SEO/GEO', 'Product Page', 'Information Architecture', 'Technical Storytelling', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI-Generated Mixed Footage', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
           '.current-badge': ['Current'],
           '.titem .period': ['Jan 2025 – Jul 2026', 'May 2023 – Jun 2024', 'Mar 2022 – Apr 2023', 'Jun 2020 – Mar 2022', 'Nov 2013 – Sep 2019'],
           '.titem li': [
