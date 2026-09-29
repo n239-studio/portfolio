@@ -496,32 +496,6 @@
   .updates-grid{display:flex; flex-wrap:wrap; gap:40px;}
   .update-card{flex:1 1 300px; max-width:360px; border-top:1px solid var(--line); padding-top:20px;}
 
-  /* CLOSING CTA — two-column "how I can help" (mirrors DaoAI's final tabbed CTA) */
-  .close-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 64px;}
-  @media(max-width:760px){.close-grid{grid-template-columns:1fr;}}
-  .close-col{border-top:1px solid var(--line); padding-top:24px;}
-  .close-col h4{font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:20px;}
-
-  /* CLOSING CTA (alt) — paired problem → value rows */
-  .close-pairs{display:flex; flex-direction:column;}
-  .close-pair{
-    display:grid; grid-template-columns:1fr 40px 1fr; align-items:center; gap:8px;
-    border-top:1px solid var(--line); padding:26px 0;
-  }
-  @media(max-width:760px){.close-pair{grid-template-columns:1fr; gap:10px; padding:20px 0;}}
-  .close-problem{color:var(--muted); font-size:15px;}
-  .close-value{color:var(--ink); font-size:15px; font-weight:500;}
-  .close-arrow{
-    display:flex; align-items:center; justify-content:center;
-    width:32px; height:32px; border-radius:50%; border:1px solid var(--line);
-    color:#d97706; font-size:0; line-height:1; transition:border-color .2s ease, background .2s ease;
-  }
-  .close-arrow::before{content:"→"; font-size:14px; line-height:1; transform:translateY(-.5px);}
-  @media(max-width:760px){.close-arrow{transform:rotate(90deg); width:24px; height:24px;}}
-  .close-pair:hover .close-arrow{border-color:#d97706; background:rgba(217,119,6,.08);}
-  .close-col ul{list-style:none;}
-  .close-col li{font-size:14px; padding:12px 0; border-top:1px solid var(--line);}
-  .close-col li:first-child{border-top:none;}
 
   /* CONTACT */
   footer{padding:100px 0 60px;}
@@ -904,31 +878,6 @@
   </div>
 </section>
 
-<section id="help" class="wrap">
-  <div class="section-head">
-    <div>
-      <div class="section-num"><span>04</span><span class="num-line"></span><span>How I Can Help</span></div>
-      <h2 class="serif">我讓技術落地的方式</h2>
-    </div>
-  </div>
-  <div class="close-pairs">
-    <div class="close-pair">
-      <div class="close-problem">技術很強，但第一線不知道怎麼說、怎麼用</div>
-      <div class="close-arrow">&#8594;</div>
-      <div class="close-value">把複雜技術翻譯成客戶、通路與第一線都能採用的價值敘事</div>
-    </div>
-    <div class="close-pair">
-      <div class="close-problem">新工具或新流程上線，卻沒有被團隊真正採用</div>
-      <div class="close-arrow">&#8594;</div>
-      <div class="close-value">從使用摩擦、流程與示範者切入，設計能真的被使用的落地方式</div>
-    </div>
-    <div class="close-pair">
-      <div class="close-problem">要打進亞太或中國市場，卻缺少能讓通路與客戶行動的在地化GTM</div>
-      <div class="close-arrow">&#8594;</div>
-      <div class="close-value">以跨市場 GTM、CRM 與 AI 工作流，讓採用變成可衡量的商業結果</div>
-    </div>
-  </div>
-</section>
 
 <footer id="contact">
   <div class="wrap">
@@ -976,7 +925,6 @@
           '#experience h2': '我如何讓技術被真正採用',
           '.experience-intro': '從把技術講成第一線說得出口的話，到設計流程、推動區域 GTM，再到建置 AI 工作流；每一段經歷都在回答同一個問題：怎麼讓人真的願意用。',
           '#skills h2': '核心能力與運作體系',
-          '#help h2': '我讓技術落地的方式',
           '#contact h2': '一起聊聊<br>下一個挑戰',
           '.work-cat-planning .category-name': '規劃策劃',
           '.work-cat-planning .work-category-sub': '商業策略與運作架構 · Strategic Planning &amp; Operations',
@@ -1069,8 +1017,6 @@
             'APAC / 跨市場 GTM', '展會商務閉環', 'SEO / GEO 搜尋策略', '經銷與合作夥伴拓展',
             '中英雙語決策溝通', 'C-Level 商業提案', '跨文化談判', '組織賦能培訓'
           ],
-          '.close-problem': ['技術很強，但第一線不知道怎麼說、怎麼用', '新工具或新流程上線，卻沒有被團隊真正採用', '要打進亞太或中國市場，卻缺少能讓通路與客戶行動的在地化GTM'],
-          '.close-value': ['把複雜技術翻譯成客戶、通路與第一線都能採用的價值敘事', '從使用摩擦、流程與示範者切入，設計能真的被使用的落地方式', '以跨市場 GTM、CRM 與 AI 工作流，讓採用變成可衡量的商業結果'],
           '.contact-links a': ['寄 Email', 'LinkedIn']
         }
       },
@@ -1089,7 +1035,6 @@
           '#experience h2': 'How I make technology truly adopted',
           '.experience-intro': 'From making technology easy for frontline teams to explain, to designing processes, leading regional GTM, and building AI workflows—every chapter answers the same question: how do you make people genuinely want to use it?',
           '#skills h2': 'Core Capabilities &amp; Operating Systems',
-          '#help h2': 'How I make technology land',
           '#contact h2': 'Let\'s talk about<br>the next challenge.',
           '.work-cat-planning .category-name': 'Strategic Planning',
           '.work-cat-planning .work-category-sub': 'Operations &amp; Systems Architecture',
@@ -1182,8 +1127,6 @@
             'APAC / Cross-Market GTM', 'Trade Show Funnel', 'SEO / GEO Strategy', 'Channel &amp; Partner Enablement',
             'Bilingual Executive Pitch', 'C-Level Presentations', 'Cross-Cultural Negotiation', 'Organizational Enablement'
           ],
-          '.close-problem': ['Strong technology, but frontline teams do not know how to explain or use it', 'A new tool or process launches, but the team never truly adopts it', 'Entering APAC or China without localized GTM that moves channels and customers to act'],
-          '.close-value': ['Translate complex technology into value narratives customers, channels, and frontline teams can adopt', 'Start with workflow friction, process, and early adopters to design a way of working people will truly use', 'Combine cross-market GTM, CRM, and AI workflows to make adoption a measurable commercial outcome'],
           '.contact-links a': ['Email', 'LinkedIn']
         }
       }
