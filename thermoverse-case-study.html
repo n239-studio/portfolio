@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThermoVerse 深科技商業化架構與 GTM 推進 | Rome Ye 作品集</title>
+<meta name="description" content="Rome Ye 案例深入分析：為美台潔淨能源新創 ThermoVerse 統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與硬核物理規格，拆解為雙支柱商業模式、5 大使用情境矩陣與 Futex 展會獲客閉環。">
+<link rel="icon" type="image/png" href="Rome Logo.png">
+<style>
+  @import url('https://fonts.cdnfonts.com/css/noto-serif-tc');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #ffffff;
+    --paper: #faf9f6;
+    --paper-card: #f4f2eb;
+    --ink: #141414;
+    --muted: #6b6b66;
+    --line: #dedcd4;
+    --accent: #d97706;
+    --accent-light: rgba(217, 119, 6, 0.08);
+    --dark-surface: #0f131c;
+    --dark-border: rgba(255, 255, 255, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; background: #faf9f6; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", "Noto Sans TC", Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .serif { font-family: "Noto Serif TC", "Georgia", serif; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media(max-width: 760px) {
+    .wrap { padding-left: 24px; padding-right: 24px; }
+  }
+
+  /* HEADER & FLOATING NAV */
+  header {
+    position: fixed;
+    top: 18px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  header > .wrap {
+    display: flex;
+    justify-content: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    width: 520px;
+    max-width: 100%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(20, 20, 20, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .nav-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--muted);
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-links a:hover {
+    color: var(--ink);
+  }
+  .lang-btn {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .lang-btn:hover {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .contact-btn {
+    background: var(--ink);
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+  .contact-btn:hover {
+    background: #000;
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #faf9f6 0%, #ffffff 100%);
+  }
+  .case-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 4.5vw, 54px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .hero-lede {
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.7;
+    color: #3f3f3c;
+    max-width: 860px;
+    margin-bottom: 40px;
+  }
+
+  /* METADATA GRID */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 50px;
+  }
+  @media(max-width: 840px) {
+    .meta-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
+  }
+  @media(max-width: 520px) {
+    .meta-grid { grid-template-columns: 1fr; }
+  }
+  .meta-col .meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .meta-col .meta-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* HERO IMAGE CARD */
+  .hero-visual {
+    margin: 40px 0 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0f131c;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+  }
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .visual-caption {
+    padding: 14px 20px;
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .visual-caption a {
+    color: var(--accent);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* CHAPTER SECTIONS */
+  .chapter {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .chapter-header {
+    margin-bottom: 40px;
+  }
+  .chapter-num {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .chapter-title {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .chapter-intro {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4a4a45;
+    max-width: 820px;
+  }
+
+  /* CHAPTER 1: COMPARISON GRID */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  @media(max-width: 760px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  .compare-card {
+    padding: 32px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .compare-card.highlight {
+    background: #ffffff;
+    border-color: #d97706;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.08);
+  }
+  .compare-card h4 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .compare-card.problem h4 { color: #dc2626; }
+  .compare-card.highlight h4 { color: var(--accent); }
+  .compare-card ul {
+    list-style: none;
+  }
+  .compare-card li {
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    color: #2e2e2b;
+  }
+  .compare-card li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--muted);
+    font-weight: bold;
+  }
+  .compare-card.highlight li::before {
+    color: var(--accent);
+  }
+
+  /* CHAPTER 2: PILLARS CARDS */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 36px;
+  }
+  @media(max-width: 760px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+  }
+  .pillar-card {
+    border-radius: 14px;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pillar-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .pillar-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .pillar-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #4a4a45;
+    margin-bottom: 20px;
+  }
+  .pillar-features {
+    list-style: none;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+  .pillar-features li {
+    font-size: 13.5px;
+    padding: 6px 0;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .pillar-features li::before {
+    content: "✓";
+    color: #10b981;
+    font-weight: bold;
+  }
+  .synergy-box {
+    margin-top: 28px;
+    padding: 24px 30px;
+    border-radius: 12px;
+    background: var(--paper-card);
+    border: 1px dashed #d97706;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #383834;
+  }
+  .synergy-box strong {
+    color: var(--ink);
+  }
+
+  /* CHAPTER 3: USE CASES MATRIX */
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .case-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .case-box:hover {
+    transform: translateY(-2px);
+    border-color: #d97706;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  }
+  .case-box-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .case-box h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .case-box-row {
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .case-box-row .row-label {
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .case-box-row .row-text {
+    color: #4a4a45;
+  }
+  .roi-pill {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  /* CHAPTER 4: GTM FUNNEL */
+  .funnel-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 36px;
+  }
+  @media(max-width: 760px) {
+    .funnel-steps { grid-template-columns: 1fr; }
+  }
+  .funnel-step {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+  }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .funnel-step h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .funnel-step p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #4a4a45;
+  }
+  .partner-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .partner-badge {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* CHAPTER 5: KEY TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+  }
+  @media(max-width: 760px) {
+    .takeaway-grid { grid-template-columns: 1fr; }
+  }
+  .takeaway-item {
+    padding: 24px;
+    background: var(--paper);
+    border-radius: 12px;
+    border-top: 3px solid var(--accent);
+  }
+  .takeaway-item h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .takeaway-item p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #4a4a45;
+  }
+
+  /* CALLOUT CTA */
+  .callout-box {
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--dark-surface);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .callout-copy h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .callout-copy p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 540px;
+  }
+  .callout-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn-live {
+    background: #d97706;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-live:hover { background: #b45309; }
+  .btn-back {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    font-size: 13px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+  }
+  .btn-back:hover { background: rgba(255, 255, 255, 0.2); }
+
+  /* FOOTER */
+  footer {
+    padding: 80px 0 40px;
+    background: #ffffff;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+  }
+  .footer-logo img {
+    height: 36px;
+    width: auto;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .footer-links a:hover { color: var(--ink); }
+  .copyright {
+    padding-top: 24px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  @media(max-width: 600px) {
+    header > .wrap { padding: 0 12px; }
+    nav { width: 100%; height: 50px; padding: 0 12px; }
+    .hero { padding-top: 100px; }
+    .chapter { padding: 50px 0; }
+    .callout-box { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="nav-logo" href="index.html" aria-label="回到作品集首頁">
+        <img src="Rome Logo.png" alt="Rome">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work" id="navBack"><span style="font-size:14px">←</span> <span data-key="nav_back">返回作品集</span></a>
+        <button type="button" class="lang-btn" id="langBtn" aria-label="切換語言">EN</button>
+        <a class="contact-btn" href="mailto:srs0319@gmail.com" data-key="nav_contact">聯絡我</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="case-badge" data-key="hero_badge">Strategy &amp; Ops · 案例深入分析 01</div>
+      <h1 class="serif" data-key="hero_title">ThermoVerse 深科技商業化架構與 GTM 推進</h1>
+      <p class="hero-lede" data-key="hero_lede">
+        為美台潔淨能源新創統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與硬核物理規格，拆解為「現行服務」與「未來硬體」雙支柱商業模式、5 大使用情境矩陣與 Futex 展會獲客閉環。
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-col">
+          <div class="meta-label" data-key="meta_label_role">專案角色</div>
+          <div class="meta-value" data-key="meta_val_role">商業策略規劃與 GTM 負責人 (Client Lead)</div>
+        </div>
+        <div class="meta-col">
+          <div class="meta-label" data-key="meta_label_domain">產業與技術</div>
+          <div class="meta-value" data-key="meta_val_domain">深科技 / 專利熱電池（LATCHES™）/ 建築節能</div>
+        </div>
+        <div class="meta-col">
+          <div class="meta-label" data-key="meta_label_markets">目標市場</div>
+          <div class="meta-value" data-key="meta_val_markets">美國（DOE / 紐約 / 加州法規）與 台灣（APAC）</div>
+        </div>
+        <div class="meta-col">
+          <div class="meta-label" data-key="meta_label_deliverables">核心產出</div>
+          <div class="meta-value" data-key="meta_val_deliverables">雙支柱商模 · 5大情境轉譯 · 展會商務閉環 · 數位樞紐</div>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL -->
+      <div class="hero-visual">
+        <img src="thumb-thermoverse.png" alt="ThermoVerse 商業化全貌：雙支柱架構與天花板熱電池實機展示">
+        <div class="visual-caption">
+          <span data-key="visual_caption_text">ThermoVerse 商業架構實作：辦公室天花板輕鋼架實裝（Drop-Ceiling Module）與雙語官方數位樞紐。</span>
+          <a href="https://www.thermoverse.com/" target="_blank" rel="noopener noreferrer" data-key="visual_link">造訪 thermoverse.com 官網 ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 1: THE CHALLENGE -->
+  <section class="chapter" id="chapter-1">
+    <div class="wrap">
+      <div class="chapter-header">
+        <div class="chapter-num">Chapter 01</div>
+        <h2 class="chapter-title serif" data-key="ch1_title">挑戰與破局：物理學與商業價值的斷層</h2>
+        <p class="chapter-intro" data-key="ch1_intro">
+          深科技（Deep Tech）早期最常見的致命傷，是陷入「工程思維陷阱」：創辦人與技術團隊熱衷於解釋相變材料（PCM）、潛熱容量、熱焓曲線與熱力學相變週期；但大樓業主、工務主管與財務長（CFO）在乎的完全是另一個維度的語言。
+        </p>
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-card problem">
+          <h4 data-key="ch1_eng_heading">⚠️ 研發端的工程思維（客戶聽不懂）</h4>
+          <ul id="ch1_eng_list">
+            <li>強調相變潛熱值（Enthalpy curve）與材料分子穩定度。</li>
+            <li>說明冷凝端傳熱效率與相變溫度切換臨界點。</li>
+            <li>充斥流體力學與 HVAC 機電管線串接細節。</li>
+            <li>商業對話被拉入漫長且未標準化的客製工程討論。</li>
+          </ul>
+        </div>
+
+        <div class="compare-card highlight">
+          <h4 data-key="ch1_biz_heading">🎯 轉譯後的決策者思維（客戶立即買單）</h4>
+          <ul id="ch1_biz_list">
+            <li><strong>都會安全（Urban-Safe）</strong>：非易燃、非高壓液體，通過嚴格室內消防法規。</li>
+            <li><strong>零實體佔地（Zero-Footprint）</strong>：裝在輕鋼架天花板夾層，不侵佔昂貴出租坪數。</li>
+            <li><strong>尖峰電費抑低（Peak Shaving）</strong>：夜間便宜時段預冷蓄熱，日間高價時段釋放，降低容量電費。</li>
+            <li><strong>無痛快裝（Rapid Payback）</strong>：標準化模組，施工不需大樓停業停工，加速 ROI 回收。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: TWO-PILLAR ARCHITECTURE -->
+  <section class="chapter" id="chapter-2" style="background: #faf9f6;">
+    <div class="wrap">
+      <div class="chapter-header">
+        <div class="chapter-num">Chapter 02</div>
+        <h2 class="chapter-title serif" data-key="ch2_title">雙支柱架構：平衡即刻現金流與長線硬體研發</h2>
+        <p class="chapter-intro" data-key="ch2_intro">
+          深科技硬體從專利驗證到規模量產需要 12–24 個月認證期。若只靠銷售未來硬體，公司將面臨漫長現金流枯竭；若只做傳統節能顧問，則失去深科技估值溢價。我為 ThermoVerse 設計了「現行服務＋未來硬體」的雙支柱飛輪架構。
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-tag" data-key="ch2_p1_tag">支柱一 · 即刻現金流</div>
+            <h3 data-key="ch2_p1_title">建築能源診斷與 ECM 顧問服務</h3>
+            <p data-key="ch2_p1_desc">符合 BPI 標準的能源審計、建築節能措施（ECM）顧問與生態系認證承包商配對。為企業大樓快速盤點能源漏洞。</p>
+            <ul class="pillar-features" id="ch2_p1_features">
+              <li>以客觀顧問角色建立與企業業主的信任關係。</li>
+              <li>不需等待硬體生產，首月即可啟動顧問收費機制。</li>
+              <li>第一手蒐集建築物 HVAC 負載與耗能數據，建立資料護城河。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-card" style="border-color: #d97706;">
+          <div>
+            <div class="pillar-tag" data-key="ch2_p2_tag">支柱二 · 高估值創新</div>
+            <h3 data-key="ch2_p2_title">LATCHES™ 專利天花板熱電池</h3>
+            <p data-key="ch2_p2_desc">模組化天花板相變熱電池系統，結合智慧預測充放能演算法。專為都會高密度建築設計的革命性硬體產品。</p>
+            <ul class="pillar-features" id="ch2_p2_features">
+              <li>專利輕鋼架嵌裝設計，完全免去昂貴地面或屋頂結構改裝。</li>
+              <li>削峰填谷轉移尖峰用電，直接抑低昂貴契約容量電費。</li>
+              <li>享有美國能源部（DOE）及政府潔淨能源技術補貼優勢。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="synergy-box">
+        <strong data-key="ch2_synergy_label">💡 雙支柱協同效應（Synergy Flywheel）：</strong>
+        <span data-key="ch2_synergy_text">
+          支柱一的「能源審計診斷」並非單純的服務收費，它本質上是支柱二 LATCHES™ 熱電池硬體的<strong>「商務資格過濾與數據探勘器」</strong>。在審計過程中，團隊取得客戶大樓的冰機規格、耗能時段與配電配置，若發現尖峰電費嚴重過高，診斷報告的最終解決方案即直接順水推舟導入 LATCHES™ 模組改裝！
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: 5 USE CASES MATRIX -->
+  <section class="chapter" id="chapter-3">
+    <div class="wrap">
+      <div class="chapter-header">
+        <div class="chapter-num">Chapter 03</div>
+        <h2 class="chapter-title serif" data-key="ch3_title">5 大使用情境矩陣與財務回報模型</h2>
+        <p class="chapter-intro" data-key="ch3_intro">
+          深科技若沒有清晰的應用場景，銷售團隊與合作夥伴就無法開展業務。我將 LATCHES™ 與節能技術切分為 5 個高意圖目標市場，為每個場景獨立建構「痛點摩擦、解決方案、價值主張與 ROI 模型」。
+        </p>
+      </div>
+
+      <div class="cases-grid">
+        <!-- 01 Commercial RE -->
+        <div class="case-box">
+          <div class="case-box-num">USE CASE 01</div>
+          <h4 data-key="uc1_title">商用辦公大樓 (Commercial Real Estate)</h4>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_friction">核心痛點：</span>
+            <span class="row-text" data-key="uc1_friction">尖峰容量電費極高，但大樓每一平方公尺皆具租金收益，業主拒絕在地面或地下室增設龐大蓄冰槽。</span>
+          </div>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_solution">轉譯解方：</span>
+            <span class="row-text" data-key="uc1_solution">利用閒置天花板夾層（Plenum Space）安裝模組，零實體佔地（Zero-Footprint）。</span>
+          </div>
+          <div class="roi-pill" data-key="uc1_roi">預計抑低 20–30% 空調尖峰電費 · 3–5 年回收</div>
+        </div>
+
+        <!-- 02 Hospitality -->
+        <div class="case-box">
+          <div class="case-box-num">USE CASE 02</div>
+          <h4 data-key="uc2_title">連鎖飯店與旅宿業 (Hospitality &amp; Hotels)</h4>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_friction">核心痛點：</span>
+            <span class="row-text" data-key="uc2_friction">房客對空調噪音與溫差極為敏感；旺季滿房空調負載飆高；飯店無法承受停業數週進行機電改裝。</span>
+          </div>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_solution">轉譯解方：</span>
+            <span class="row-text" data-key="uc2_solution">被動吸熱完全無運轉噪音；輕鋼架模組化快裝，單間客房 2 小時完成無痛施工。</span>
+          </div>
+          <div class="roi-pill" data-key="uc2_roi">平滑季節性入住負載 · 提升住客滿意度與 ESG</div>
+        </div>
+
+        <!-- 03 Education -->
+        <div class="case-box">
+          <div class="case-box-num">USE CASE 03</div>
+          <h4 data-key="uc3_title">大專院校與校園 (Education &amp; Campuses)</h4>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_friction">核心痛點：</span>
+            <span class="row-text" data-key="uc3_friction">階梯教室與活動中心在特定時段產生劇烈用電波峰；公部門及大學面臨嚴格的校園 ESG 與脫碳指標。</span>
+          </div>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_solution">轉譯解方：</span>
+            <span class="row-text" data-key="uc3_solution">集中於特定高負載場域精準配置，搭配數據可視化儀表板，作為校園永續教育展示點。</span>
+          </div>
+          <div class="roi-pill" data-key="uc3_roi">符合公部門綠色採購規範 · 爭取政府專案補助</div>
+        </div>
+
+        <!-- 04 General Contractors -->
+        <div class="case-box">
+          <div class="case-box-num">USE CASE 04</div>
+          <h4 data-key="uc4_title">統包工程商與建築師 (GCs &amp; Architects)</h4>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_friction">核心痛點：</span>
+            <span class="row-text" data-key="uc4_friction">傳統機電（MEP）重新走線與大改管工程繁複、工期冗長，且驗收審查具有高風險。</span>
+          </div>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_solution">轉譯解方：</span>
+            <span class="row-text" data-key="uc4_solution">採用標準 2x2 或 2x4 天花板即插即用模組，預製化設計大幅降低現場工時達 50%。</span>
+          </div>
+          <div class="roi-pill" data-key="uc4_roi">降低工期延誤風險 · 提升 LEED / 綠建築標章得分</div>
+        </div>
+
+        <!-- 05 Corporate ESG -->
+        <div class="case-box">
+          <div class="case-box-num">USE CASE 05</div>
+          <h4 data-key="uc5_title">企業 ESG 與資產脫碳 (ESG &amp; Decarbonization)</h4>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_friction">核心痛點：</span>
+            <span class="row-text" data-key="uc5_friction">紐約 Local Law 97 等碳排罰款法規即將生效；企業需要具備科學依據的精確範疇二（Scope 2）減碳佐證。</span>
+          </div>
+          <div class="case-box-row">
+            <span class="row-label" data-key="lbl_solution">轉譯解方：</span>
+            <span class="row-text" data-key="uc5_solution">結合美國能源部（DOE）試驗數據，提供可被審計的 kWh 節能量與碳足跡抵扣報表。</span>
+          </div>
+          <div class="roi-pill" data-key="uc5_roi">直接規避高額碳排法規罰款 · 守護不動產資產估值</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: FUTEX EXHIBITION & DIGITAL HUB -->
+  <section class="chapter" id="chapter-4" style="background: #faf9f6;">
+    <div class="wrap">
+      <div class="chapter-header">
+        <div class="chapter-num">Chapter 04</div>
+        <h2 class="chapter-title serif" data-key="ch4_title">Futex 未來科技展 × 雙語數位樞紐閉環</h2>
+        <p class="chapter-intro" data-key="ch4_intro">
+          實體展會絕不能只是發傳單或展示冷冰冰的硬體零件。在 Futex 未來科技展中，我為 ThermoVerse 打造了「現場精準商務鉤子 → 掃碼直達雙語評估頁 → 預約排程診斷」的完整端到端獲客閉環。
+        </p>
+      </div>
+
+      <div class="funnel-steps">
+        <div class="funnel-step">
+          <div class="step-num">1</div>
+          <h4 data-key="step1_title">現場 3 大商業鉤子</h4>
+          <p data-key="step1_desc">拋棄複雜技術名詞，以「都會安全」、「零實體佔地」、「高速投資回報」三大標籤直接抓住展會穿梭的企業決策者目光。</p>
+        </div>
+        <div class="funnel-step">
+          <div class="step-num">2</div>
+          <h4 data-key="step2_title">實機截面視覺展示</h4>
+          <p data-key="step2_desc">展位正中央展示天花板輕鋼架實裝剖面模型，讓建築師與工務主管 3 秒理解安裝原理與空間優勢，徹底消除施工疑慮。</p>
+        </div>
+        <div class="funnel-step">
+          <div class="step-num">3</div>
+          <h4 data-key="step3_title">掃碼預約診斷漏斗</h4>
+          <p data-key="step3_desc">現場 QR Code 直通雙語官方數位樞紐，引導意向客戶填寫建築面積與冰機噸數，自動化收斂為 30 分鐘專屬診斷排程。</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px;">
+        <h4 style="font-size:14px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:14px;" data-key="partners_title">全球策略驗證與背書機構</h4>
+        <div class="partner-badges">
+          <span class="partner-badge">🇺🇸 U.S. Department of Energy (DOE)</span>
+          <span class="partner-badge">Innovation Crossroads</span>
+          <span class="partner-badge">NSF I-Corps</span>
+          <span class="partner-badge">IMPEL Building Technologies</span>
+          <span class="partner-badge">RISE Clean Energy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: KEY TAKEAWAYS -->
+  <section class="chapter" id="chapter-5">
+    <div class="wrap">
+      <div class="chapter-header">
+        <div class="chapter-num">Chapter 05</div>
+        <h2 class="chapter-title serif" data-key="ch5_title">專案復盤與核心產出</h2>
+        <p class="chapter-intro" data-key="ch5_intro">
+          此專案的核心價值，在於將原本停留於學術研究與專利草稿階段的硬核發明，自 0 到 1 打造為投資人與企業買家皆能看懂、能評估、能下單的現代商業系統。
+        </p>
+      </div>
+
+      <div class="takeaway-grid">
+        <div class="takeaway-item">
+          <h4 data-key="tk1_title">破除工程語言壁壘</h4>
+          <p data-key="tk1_desc">建立嚴謹的「技術-價值-財務」轉譯對照表，使團隊在面對北美建築業主與台灣半導體供應鏈決策者時，能統一口徑進行高轉換提案。</p>
+        </div>
+        <div class="takeaway-item">
+          <h4 data-key="tk2_title">雙支柱解套商業僵局</h4>
+          <p data-key="tk2_desc">透過「能源審計顧問」與「LATCHES™ 專利熱電池」的搭配，化解深科技硬體研發期漫長零收入的風險，建立健康的營運現金流閉環。</p>
+        </div>
+        <div class="takeaway-item">
+          <h4 data-key="tk3_title">線上線下端到端閉環</h4>
+          <p data-key="tk3_desc">串聯 Futex 展會展位動線與數位樞紐預約排程系統，使每次公開展出都能累積可追蹤的高價值企業客戶名單。</p>
+        </div>
+      </div>
+
+      <!-- CALLOUT BOX -->
+      <div class="callout-box">
+        <div class="callout-copy">
+          <h3 class="serif" data-key="cta_box_title">造訪 ThermoVerse 官方網站</h3>
+          <p data-key="cta_box_desc">深入檢視整合雙支柱架構、5 大使用情境與雙語評估預約流程的線上數位樞紐。</p>
+        </div>
+        <div class="callout-actions">
+          <a href="https://www.thermoverse.com/" target="_blank" rel="noopener noreferrer" class="btn-live" data-key="cta_btn_live">造訪 thermoverse.com ↗</a>
+          <a href="index.html#work" class="btn-back" data-key="cta_btn_back">返回作品集</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo" aria-label="回到首頁">
+        <img src="Rome Logo.png" alt="Rome">
+      </a>
+      <div class="footer-links">
+        <a href="index.html#work" data-key="ft_work">作品</a>
+        <a href="index.html#experience" data-key="ft_exp">經歷</a>
+        <a href="index.html#skills" data-key="ft_skills">技能</a>
+        <a href="mailto:srs0319@gmail.com" data-key="ft_contact">聯絡我</a>
+      </div>
+    </div>
+    <div class="copyright">Rome Ye All Rights Reserved © 2026 · Case Study Archive</div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var translations = {
+    zh: {
+      nav_back: '返回作品集',
+      nav_contact: '聯絡我',
+      hero_badge: 'Strategy & Ops · 案例深入分析 01',
+      hero_title: 'ThermoVerse 深科技商業化架構與 GTM 推進',
+      hero_lede: '為美台潔淨能源新創統籌深科技商業化架構。將專利天花板熱電池（LATCHES™）與硬核物理規格，拆解為「現行服務」與「未來硬體」雙支柱商業模式、5 大使用情境矩陣與 Futex 展會獲客閉環。',
+      meta_label_role: '專案角色',
+      meta_val_role: '商業策略規劃與 GTM 負責人 (Client Lead)',
+      meta_label_domain: '產業與技術',
+      meta_val_domain: '深科技 / 專利熱電池（LATCHES™）/ 建築節能',
+      meta_label_markets: '目標市場',
+      meta_val_markets: '美國（DOE / 紐約 / 加州法規）與 台灣（APAC）',
+      meta_label_deliverables: '核心產出',
+      meta_val_deliverables: '雙支柱商模 · 5大情境轉譯 · 展會商務閉環 · 數位樞紐',
+      visual_caption_text: 'ThermoVerse 商業架構實作：辦公室天花板輕鋼架實裝（Drop-Ceiling Module）與雙語官方數位樞紐。',
+      visual_link: '造訪 thermoverse.com 官網 ↗',
+      ch1_title: '挑戰與破局：物理學與商業價值的斷層',
+      ch1_intro: '深科技（Deep Tech）早期最常見的致命傷，是陷入「工程思維陷阱」：創辦人與技術團隊熱衷於解釋相變材料（PCM）、潛熱容量、熱焓曲線與熱力學相變週期；但大樓業主、工務主管與財務長（CFO）在乎的完全是另一個維度的語言。',
+      ch1_eng_heading: '⚠️ 研發端的工程思維（客戶聽不懂）',
+      ch1_biz_heading: '🎯 轉譯後的決策者思維（客戶立即買單）',
+      ch2_title: '雙支柱架構：平衡即刻現金流與長線硬體研發',
+      ch2_intro: '深科技硬體從專利驗證到規模量產需要 12–24 個月認證期。若只靠銷售未來硬體，公司將面臨漫長現金流枯竭；若只做傳統節能顧問，則失去深科技估值溢價。我為 ThermoVerse 設計了「現行服務＋未來硬體」的雙支柱飛輪架構。',
+      ch2_p1_tag: '支柱一 · 即刻現金流',
+      ch2_p1_title: '建築能源診斷與 ECM 顧問服務',
+      ch2_p1_desc: '符合 BPI 標準的能源審計、建築節能措施（ECM）顧問與生態系認證承包商配對。為企業大樓快速盤點能源漏洞。',
+      ch2_p2_tag: '支柱二 · 高估值創新',
+      ch2_p2_title: 'LATCHES™ 專利天花板熱電池',
+      ch2_p2_desc: '模組化天花板相變熱電池系統，結合智慧預測充放能演算法。專為都會高密度建築設計的革命性硬體產品。',
+      ch2_synergy_label: '💡 雙支柱協同效應（Synergy Flywheel）：',
+      ch2_synergy_text: '支柱一的「能源審計診斷」並非單純的服務收費，它本質上是支柱二 LATCHES™ 熱電池硬體的「商務資格過濾與數據探勘器」。在審計過程中，團隊取得客戶大樓的冰機規格、耗能時段與配電配置，若發現尖峰電費嚴重過高，診斷報告的最終解決方案即直接順水推舟導入 LATCHES™ 模組改裝！',
+      ch3_title: '5 大使用情境矩陣與財務回報模型',
+      ch3_intro: '深科技若沒有清晰的應用場景，銷售團隊與合作夥伴就無法開展業務。我將 LATCHES™ 與節能技術切分為 5 個高意圖目標市場，為每個場景獨立建構「痛點摩擦、解決方案、價值主張與 ROI 模型」。',
+      lbl_friction: '核心痛點：',
+      lbl_solution: '轉譯解方：',
+      uc1_title: '商用辦公大樓 (Commercial Real Estate)',
+      uc1_friction: '尖峰容量電費極高，但大樓每一平方公尺皆具租金收益，業主拒絕在地面或地下室增設龐大蓄冰槽。',
+      uc1_solution: '利用閒置天花板夾層（Plenum Space）安裝模組，零實體佔地（Zero-Footprint）。',
+      uc1_roi: '預計抑低 20–30% 空調尖峰電費 · 3–5 年回收',
+      uc2_title: '連鎖飯店與旅宿業 (Hospitality & Hotels)',
+      uc2_friction: '房客對空調噪音與溫差極為敏感；旺季滿房空調負載飆高；飯店無法承受停業數週進行機電改裝。',
+      uc2_solution: '被動吸熱完全無運轉噪音；輕鋼架模組化快裝，單間客房 2 小時完成無痛施工。',
+      uc2_roi: '平滑季節性入住負載 · 提升住客滿意度與 ESG',
+      uc3_title: '大專院校與校園 (Education & Campuses)',
+      uc3_friction: '階梯教室與活動中心在特定時段產生劇烈用電波峰；公部門及大學面臨嚴格的校園 ESG 與脫碳指標。',
+      uc3_solution: '集中於特定高負載場域精準配置，搭配數據可視化儀表板，作為校園永續教育展示點。',
+      uc3_roi: '符合公部門綠色採購規範 · 爭取政府專案補助',
+      uc4_title: '統包工程商與建築師 (GCs & Architects)',
+      uc4_friction: '傳統機電（MEP）重新走線與大改管工程繁複、工期冗長，且驗收審查具有高風險。',
+      uc4_solution: '採用標準 2x2 或 2x4 天花板即插即用模組，預製化設計大幅降低現場工時達 50%。',
+      uc4_roi: '降低工期延誤風險 · 提升 LEED / 綠建築標章得分',
+      uc5_title: '企業 ESG 與資產脫碳 (ESG & Decarbonization)',
+      uc5_friction: '紐約 Local Law 97 等碳排罰款法規即將生效；企業需要具備科學依據的精確範疇二（Scope 2）減碳佐證。',
+      uc5_solution: '結合美國能源部（DOE）試驗數據，提供可被審計的 kWh 節能量與碳足跡抵扣報表。',
+      uc5_roi: '直接規避高額碳排法規罰款 · 守護不動產資產估值',
+      ch4_title: 'Futex 未來科技展 × 雙語數位樞紐閉環',
+      ch4_intro: '實體展會絕不能只是發傳單或展示冷冰冰的硬體零件。在 Futex 未來科技展中，我為 ThermoVerse 打造了「現場精準商務鉤子 → 掃碼直達雙語評估頁 → 預約排程診斷」的完整端到端獲客閉環。',
+      step1_title: '現場 3 大商業鉤子',
+      step1_desc: '拋棄複雜技術名詞，以「都會安全」、「零實體佔地」、「高速投資回報」三大標籤直接抓住展會穿梭的企業決策者目光。',
+      step2_title: '實機截面視覺展示',
+      step2_desc: '展位正中央展示天花板輕鋼架實裝剖面模型，讓建築師與工務主管 3 秒理解安裝原理與空間優勢，徹底消除施工疑慮。',
+      step3_title: '掃碼預約診斷漏斗',
+      step3_desc: '現場 QR Code 直通雙語官方數位樞紐，引導意向客戶填寫建築面積與冰機噸數，自動化收斂為 30 分鐘專屬診斷排程。',
+      partners_title: '全球策略驗證與背書機構',
+      ch5_title: '專案復盤與核心產出',
+      ch5_intro: '此專案的核心價值，在於將原本停留於學術研究與專利草稿階段的硬核發明，自 0 到 1 打造為投資人與企業買家皆能看懂、能評估、能下單的現代商業系統。',
+      tk1_title: '破除工程語言壁壘',
+      tk1_desc: '建立嚴謹的「技術-價值-財務」轉譯對照表，使團隊在面對北美建築業主與台灣半導體供應鏈決策者時，能統一口徑進行高轉換提案。',
+      tk2_title: '雙支柱解套商業僵局',
+      tk2_desc: '透過「能源審計顧問」與「LATCHES™ 專利熱電池」的搭配，化解深科技硬體研發期漫長零收入的風險，建立健康的營運現金流閉環。',
+      tk3_title: '線上線下端到端閉環',
+      tk3_desc: '串聯 Futex 展會展位動線與數位樞紐預約排程系統，使每次公開展出都能累積可追蹤的高價值企業客戶名單。',
+      cta_box_title: '造訪 ThermoVerse 官方網站',
+      cta_box_desc: '深入檢視整合雙支柱架構、5 大使用情境與雙語評估預約流程的線上數位樞紐。',
+      cta_btn_live: '造訪 thermoverse.com ↗',
+      cta_btn_back: '返回作品集',
+      ft_work: '作品',
+      ft_exp: '經歷',
+      ft_skills: '技能',
+      ft_contact: '聯絡我'
+    },
+    en: {
+      nav_back: 'Back to Work',
+      nav_contact: 'Contact Me',
+      hero_badge: 'Strategy & Ops · Case Study 01',
+      hero_title: 'ThermoVerse Deep-Tech Commercialization & GTM Architecture',
+      hero_lede: 'Orchestrating the deep-tech commercialization architecture for a US-Taiwan clean energy startup. Deconstructing patented drop-ceiling thermal battery (LATCHES™) and complex thermodynamics into a dual-pillar business model, a 5-use-case matrix, and an end-to-end Futex exhibition conversion funnel.',
+      meta_label_role: 'Role',
+      meta_val_role: 'Client Lead - Strategy & GTM Architecture',
+      meta_label_domain: 'Tech & Domain',
+      meta_val_domain: 'Deep Tech / Thermal Battery (LATCHES™) / Building Efficiency',
+      meta_label_markets: 'Target Markets',
+      meta_val_markets: 'United States (DOE / NYC LL97 / Title 24) & Taiwan (APAC)',
+      meta_label_deliverables: 'Deliverables',
+      meta_val_deliverables: 'Dual-Pillar Model · 5 Use Cases · Exhibition GTM · Web Hub',
+      visual_caption_text: 'ThermoVerse Commercial Implementation: In-situ office drop-ceiling installation module and bilingual official digital hub.',
+      visual_link: 'Visit thermoverse.com ↗',
+      ch1_title: 'The Challenge: Bridging Physics & Commercial Value',
+      ch1_intro: 'The most common pitfall for early-stage deep tech startups is the "engineering trap." Technical founders and engineers love discussing phase change materials (PCM), latent heat capacity, enthalpy curves, and thermodynamic hysteresis. But building owners, facility heads, and CFOs speak an entirely different language.',
+      ch1_eng_heading: '⚠️ Engineering Mindset (Causes Buyer Friction)',
+      ch1_biz_heading: '🎯 Translated Decision-Maker Lens (Drives Buy-In)',
+      ch2_title: 'Two-Pillar Architecture: Balancing Near-Term Cash Flow & Long-Term Innovation',
+      ch2_intro: 'Deep-tech hardware requires 12–24 months of rigorous certification and pilot cycles before scaling. Relying solely on future hardware leads to severe cash flow exhaustion, while pure consulting sacrifices deep-tech valuation premiums. I formulated a synergistic two-pillar flywheel for ThermoVerse.',
+      ch2_p1_tag: 'Pillar 01 · Immediate Cash Flow',
+      ch2_p1_title: 'Energy Assessments & ECM Consulting',
+      ch2_p1_desc: 'BPI-compliant building energy audits, Energy Conservation Measure (ECM) advisory, and contractor ecosystem matchmaking for enterprise facilities.',
+      ch2_p2_tag: 'Pillar 02 · High-Valuation Innovation',
+      ch2_p2_title: 'LATCHES™ Drop-Ceiling Thermal Battery',
+      ch2_p2_desc: 'Patented phase-change modular thermal battery system integrated with predictive charging algorithms, engineered specifically for dense urban high-rises.',
+      ch2_synergy_label: '💡 Synergy Flywheel Mechanism:',
+      ch2_synergy_text: 'Pillar 1 energy assessments are far more than consulting revenues—they act as the business qualification filter and data scout for Pillar 2 LATCHES™ hardware. By auditing chiller specs, tariff peaks, and MEP routing, the assessment report seamlessly guides qualified high-peak buildings directly into LATCHES™ retrofit implementation.',
+      ch3_title: '5 Key Use Cases Matrix & Financial Payback Modeling',
+      ch3_intro: 'Without concrete application contexts, sales partners and enterprise channels cannot close deals. I segmented LATCHES™ into 5 high-intent vertical markets, engineering dedicated pain point analyses, technical translations, and ROI payback models for each.',
+      lbl_friction: 'Operational Friction:',
+      lbl_solution: 'Translated Solution:',
+      uc1_title: 'Commercial Real Estate (CRE)',
+      uc1_friction: 'Punitive utility peak demand charges, yet every square meter yields rental income—owners strictly reject bulky basement or rooftop chiller tanks.',
+      uc1_solution: 'Installs entirely within standard suspended drop-ceiling plenum space—zero rentable floor area lost (Zero-Footprint).',
+      uc1_roi: '20–30% Peak Cooling Demand Reduction · 3–5 Year Payback',
+      uc2_title: 'Hospitality & Hotels',
+      uc2_friction: 'Guests are acutely sensitive to HVAC acoustic noise and thermal swings; seasonal occupancy surges; hotels cannot shut down floors for weeks of renovations.',
+      uc2_solution: 'Completely silent passive thermal absorption; modular drop-in ceiling units installed room-by-room in under 2 hours without hotel closures.',
+      uc2_roi: 'Smooths Seasonal Occupancy Spikes · Boosts Guest Satisfaction & ESG',
+      uc3_title: 'Education & Campuses',
+      uc3_friction: 'Massive, concentrated cooling spikes during lecture hours; universities face strict institutional carbon reduction mandates and public ESG targets.',
+      uc3_solution: 'Targeted modular placement in high-density auditoriums, paired with digital telemetry dashboards for educational sustainability showcases.',
+      uc3_roi: 'Complies with Green Procurement · Unlocks State Energy Grants',
+      uc4_title: 'General Contractors & Architects',
+      uc4_friction: 'Complex MEP rework, pipe re-routing, and prolonged structural inspections create severe project handover delays and code compliance risks.',
+      uc4_solution: 'Standard 2x2 and 2x4 drop-in prefabricated modular units cut on-site mechanical installation labor by 50%.',
+      uc4_roi: 'Mitigates Project Delays · Earns Substantial LEED Certification Points',
+      uc5_title: 'Corporate ESG & Asset Decarbonization',
+      uc5_friction: 'Impending carbon penalty regulations (e.g., NYC Local Law 97); enterprises demand auditable, science-based Scope 2 decarbonization metrics.',
+      uc5_solution: 'Supported by U.S. DOE test facility telemetry, providing verifiable kWh reduction data and audit-proof carbon offset reports.',
+      uc5_roi: 'Directly Avoids Heavy Regulatory Fines · Protects Asset Valuations',
+      ch4_title: 'Futex Trade Show × Bilingual Digital Hub Funnel',
+      ch4_intro: 'Trade shows must never be passive brochure-handouts. For the Futex Future Tech Exhibition, I constructed an end-to-end inbound engine: High-impact booth hooks → QR scan to bilingual diagnostic hub → Automated 30-minute assessment booking.',
+      step1_title: '3 Executive Booth Hooks',
+      step1_desc: 'Replaced scientific jargon with three razor-sharp value pillars: "Urban-Safe", "Zero-Footprint", and "Rapid Payback" to arrest passing decision-makers.',
+      step2_title: 'Physical In-Situ Mockup',
+      step2_desc: 'An eye-level cross-sectional drop-ceiling unit demonstrated instant modularity, allowing architects and facility heads to grasp installation in seconds.',
+      step3_title: 'Automated Booking Funnel',
+      step3_desc: 'Prominent QR touchpoints routed qualified leads to the custom web hub, prompting facility tonnage inputs and scheduling targeted diagnostic sessions.',
+      partners_title: 'Strategic Validation & Institutional Backing',
+      ch5_title: 'Key Takeaways & Measurable Value',
+      ch5_intro: 'The ultimate achievement of this initiative was transforming an early laboratory patent into a structured, investor-ready, and customer-adoptable commercial enterprise.',
+      tk1_title: 'Overcoming Scientific Jargon',
+      tk1_desc: 'Created an authoritative Tech-to-Value translation playbook, aligning North American real estate owners and Taiwanese supply chain partners around quantifiable ROI.',
+      tk2_title: 'De-risking the Deep-Tech Journey',
+      tk2_desc: 'Combined energy consulting with LATCHES™ thermal batteries, solving the multi-year pre-revenue drought typical of hardware startups and unlocking immediate cash flow.',
+      tk3_title: 'End-to-End Hybrid Sales Engine',
+      tk3_desc: 'Interlinked exhibition booth engagement directly with online qualification workflows, converting physical trade show foot traffic into qualified enterprise pipelines.',
+      cta_box_title: 'Explore the Official ThermoVerse Website',
+      cta_box_desc: 'Inspect the live digital hub integrating the dual-pillar commercial model, 5 use cases, and bilingual diagnostic scheduling workflow.',
+      cta_btn_live: 'Visit thermoverse.com ↗',
+      cta_btn_back: 'Back to Work',
+      ft_work: 'Work',
+      ft_exp: 'Experience',
+      ft_skills: 'Skills',
+      ft_contact: 'Contact'
+    }
+  };
+
+  var ch1_lists = {
+    zh: {
+      eng: [
+        '強調相變潛熱值（Enthalpy curve）與材料分子穩定度。',
+        '說明冷凝端傳熱效率與相變溫度切換臨界點。',
+        '充斥流體力學與 HVAC 機電管線串接細節。',
+        '商業對話被拉入漫長且未標準化的客製工程討論。'
+      ],
+      biz: [
+        '<strong>都會安全（Urban-Safe）</strong>：非易燃、非高壓液體，通過嚴格室內消防法規。',
+        '<strong>零實體佔地（Zero-Footprint）</strong>：裝在輕鋼架天花板夾層，不侵佔昂貴出租坪數。',
+        '<strong>尖峰電費抑低（Peak Shaving）</strong>：夜間便宜時段預冷蓄熱，日間高價時段釋放，降低容量電費。',
+        '<strong>無痛快裝（Rapid Payback）</strong>：標準化模組，施工不需大樓停業停工，加速 ROI 回收。'
+      ]
+    },
+    en: {
+      eng: [
+        'Over-indexing on phase-change enthalpy curves and molecular polymer stability.',
+        'Explaining thermodynamic condensation efficiency and phase transition thresholds.',
+        'Overwhelming prospects with fluid mechanics and complex HVAC piping schematics.',
+        'Trapping sales meetings in prolonged, unstandardized bespoke engineering debates.'
+      ],
+      biz: [
+        '<strong>Urban-Safe</strong>: Non-flammable, non-pressurized, non-toxic—fully compliant with strict indoor fire codes.',
+        '<strong>Zero-Footprint</strong>: Installs in existing drop-ceiling plenum space—preserves 100% of rentable office floor area.',
+        '<strong>Peak Shaving</strong>: Pre-cools on cheap overnight tariffs, discharges during peak rate windows to slash demand charges.',
+        '<strong>Rapid Payback</strong>: Standard modular units install without facility shutdowns, accelerating financial ROI.'
+      ]
+    }
+  };
+
+  var ch2_features = {
+    zh: {
+      p1: [
+        '以客觀顧問角色建立與企業業主的信任關係。',
+        '不需等待硬體生產，首月即可啟動顧問收費機制。',
+        '第一手蒐集建築物 HVAC 負載與耗能數據，建立資料護城河。'
+      ],
+      p2: [
+        '專利輕鋼架嵌裝設計，完全免去昂貴地面或屋頂結構改裝。',
+        '削峰填谷轉移尖峰用電，直接抑低昂貴契約容量電費。',
+        '享有美國能源部（DOE）及政府潔淨能源技術補貼優勢。'
+      ]
+    },
+    en: {
+      p1: [
+        'Establishes immediate trusted-advisor relationships with enterprise building executives.',
+        'Generates immediate recurring consulting cash flow without waiting for hardware production.',
+        'Gathers ground-truth HVAC telemetry and consumption patterns to build data defensibility.'
+      ],
+      p2: [
+        'Patented drop-ceiling form factor eliminates expensive rooftop or floor structural modifications.',
+        'Predictively shifts peak cooling loads, directly slashing punitive utility capacity demand charges.',
+        'Capitalizes on U.S. Department of Energy (DOE) validation and federal clean tech incentives.'
+      ]
+    }
+  };
+
+  var currentLang = localStorage.getItem('siteLang') || localStorage.getItem('rome_lang') || 'zh';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('siteLang', lang);
+    localStorage.setItem('rome_lang', lang);
+    document.documentElement.lang = (lang === 'zh') ? 'zh-Hant' : 'en';
+
+    var langBtn = document.getElementById('langBtn');
+    if (langBtn) {
+      langBtn.textContent = (lang === 'zh') ? 'EN' : '中文';
+      langBtn.setAttribute('aria-label', (lang === 'zh') ? 'Switch to English' : '切換為繁體中文');
+    }
+
+    var dict = translations[lang];
+    if (dict) {
+      var elements = document.querySelectorAll('[data-key]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-key');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+    }
+
+    // Update dynamic lists
+    var engList = document.getElementById('ch1_eng_list');
+    if (engList && ch1_lists[lang]) {
+      engList.innerHTML = ch1_lists[lang].eng.map(function(item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+
+    var bizList = document.getElementById('ch1_biz_list');
+    if (bizList && ch1_lists[lang]) {
+      bizList.innerHTML = ch1_lists[lang].biz.map(function(item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+
+    var p1Features = document.getElementById('ch2_p1_features');
+    if (p1Features && ch2_features[lang]) {
+      p1Features.innerHTML = ch2_features[lang].p1.map(function(item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+
+    var p2Features = document.getElementById('ch2_p2_features');
+    if (p2Features && ch2_features[lang]) {
+      p2Features.innerHTML = ch2_features[lang].p2.map(function(item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    applyLanguage(currentLang);
+    var langBtn = document.getElementById('langBtn');
+    if (langBtn) {
+      langBtn.addEventListener('click', function() {
+        var nextLang = (currentLang === 'zh') ? 'en' : 'zh';
+        applyLanguage(nextLang);
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
