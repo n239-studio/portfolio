@@ -323,10 +323,11 @@
   .placeholder-note{color:#a8a6a0; font-style:italic; font-weight:400;}
   .story p{margin-bottom:10px;}
   .app-download-btn{
-    display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+    display:inline-flex; align-items:center; gap:6px; margin-top:auto;
     padding:8px 16px; border-radius:999px;
     background:var(--ink); color:#fff; font-size:12px; font-weight:600;
     text-decoration:none; letter-spacing:0.3px;
+    align-self:flex-start;
     transition:background .2s ease, transform .15s ease;
   }
   .app-download-btn:hover{background:#3a3632; color:#fff; transform:translateY(-1px);}
@@ -494,10 +495,11 @@
   }
   .flagship-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px 48px; margin-bottom:0;}
   @media(max-width:760px){.flagship-grid{grid-template-columns:1fr; gap:32px;}}
-  .flagship-item{border-top:2px solid var(--ink); padding-top:22px;}
+  .flagship-item{border-top:2px solid var(--ink); padding-top:22px; display:flex; flex-direction:column;}
   .flagship-item.is-primary{grid-column:1/-1;}
   .flagship-label{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink); font-weight:700; margin-bottom:14px;}
   .flagship-item .tag-row{min-height:64px; align-content:flex-start;}
+  .flagship-item .story{margin-bottom:16px;}
   .more-work-head{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); padding-bottom:20px; border-bottom:1px solid var(--line); margin-bottom:40px;}
 
   /* UPDATES — Latest-Insights-style cards */
