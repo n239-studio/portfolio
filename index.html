@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rome Ye | AI Technical Marketing</title>
+<title>Rome Ye | Brand Storytelling, Product Marketing &amp; AI Workflows</title>
 <style>
   @import url('https://fonts.cdnfonts.com/css/noto-serif-tc');
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -38,16 +38,16 @@
   }
   header > .wrap{width:100%; max-width:1100px; margin:0 auto; padding-left:40px; padding-right:40px;}
   nav{
-    display:flex; justify-content:space-between; align-items:center; height:58px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; height:58px;
     padding:0 14px 0 16px; border:1px solid rgba(255,255,255,.13); border-radius:999px;
     background:rgba(255,255,255,.07); backdrop-filter:blur(14px) saturate(115%); -webkit-backdrop-filter:blur(14px) saturate(115%);
     box-shadow:0 6px 18px rgba(8,12,24,.06);
-    width:460px; max-width:100%; overflow:visible;
+    width:max-content; min-width:460px; max-width:calc(100vw - 48px); overflow:visible;
     transition:width .5s cubic-bezier(.22,1,.36,1), background .3s ease, box-shadow .3s ease, padding .5s cubic-bezier(.22,1,.36,1);
   }
-  header.scrolled nav{width:58px; padding:0 9px; overflow:hidden; background:rgba(24,29,42,.34); box-shadow:0 6px 18px rgba(8,12,24,.08);}
+  header.scrolled nav{width:58px; min-width:0; gap:0; padding:0 9px; overflow:hidden; background:rgba(24,29,42,.34); box-shadow:0 6px 18px rgba(8,12,24,.08);}
   header.over-light:not(.scrolled) nav{background:rgba(255,255,255,.82); border-color:rgba(20,24,34,.08); box-shadow:0 10px 28px rgba(8,12,24,.08);}
-  .logo{font-weight:700; letter-spacing:2px; font-size:14px; text-transform:uppercase; color:#fff; transition:color .3s ease;}
+  .logo{font-weight:700; letter-spacing:2px; font-size:14px; text-transform:uppercase; color:#fff; flex-shrink:0; transition:color .3s ease;}
   .logo img{height:38px; width:auto; display:block; filter:brightness(0) invert(1);}
   header.over-light:not(.scrolled) .logo img{filter:none;}
   header.scrolled .logo{color:#fff;}
@@ -55,7 +55,7 @@
   header.over-light:not(.scrolled) .navlinks{color:rgba(17,24,39,.72);}
   header.scrolled .navlinks{opacity:0; visibility:hidden; pointer-events:none;}
   header.scrolled .navlinks{color:rgba(255,255,255,.78);}
-  .navlinks a{position:relative; display:inline-flex; align-items:center; min-height:28px; padding:0;}
+  .navlinks a{position:relative; display:inline-flex; align-items:center; min-height:28px; padding:0; white-space:nowrap; flex-shrink:0;}
   .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:#fff;transform:scaleX(0);transition:transform .25s ease;}
   header.scrolled .navlinks a::after{background:#fff;}
   .navlinks a:hover::after{transform:scaleX(1);}
@@ -64,14 +64,15 @@
   header.over-light:not(.scrolled) .navlinks a:hover{color:#111827;}
   header.scrolled .navlinks a:hover{color:#fff;}
   .lang-toggle{
-    display:inline-flex; align-items:center; justify-content:center; min-width:0; height:28px;
-    color:rgba(255,255,255,.62); background:none; border:0; border-radius:0;
-    padding:0; font:inherit; font-size:9px; line-height:1; letter-spacing:1px; text-transform:uppercase; cursor:pointer;
-    transition:color .2s ease;
+    display:inline-flex; align-items:center; justify-content:center;
+    height:30px; padding:0 12px; border-radius:999px; white-space:nowrap; flex-shrink:0;
+    color:#fff; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.32);
+    font:inherit; font-size:11px; font-weight:600; line-height:1; letter-spacing:.5px; cursor:pointer;
+    transition:background .2s ease, border-color .2s ease, color .2s ease;
   }
-  .lang-toggle:hover, header.scrolled .lang-toggle:hover{background:none; color:#fff;}
-  header.over-light:not(.scrolled) .lang-toggle{color:rgba(17,24,39,.62);}
-  header.over-light:not(.scrolled) .lang-toggle:hover{color:#111827;}
+  .lang-toggle:hover, header.scrolled .lang-toggle:hover{background:rgba(255,255,255,.28); border-color:rgba(255,255,255,.6); color:#fff;}
+  header.over-light:not(.scrolled) .lang-toggle{color:#111827; background:rgba(17,24,39,.06); border-color:rgba(17,24,39,.2);}
+  header.over-light:not(.scrolled) .lang-toggle:hover{background:rgba(17,24,39,.14); border-color:rgba(17,24,39,.35); color:#111827;}
   .navlinks .contact-link{
     min-width:86px; height:36px; justify-content:center; padding:0 18px;
     color:#20283a; background:rgba(255,255,255,.9); border:1px solid rgba(255,255,255,.55); border-radius:999px;
@@ -98,8 +99,8 @@
     header{top:18px;}
     header > .wrap{margin-left:auto; margin-right:auto; padding-left:14px; padding-right:14px;}
     header.scrolled > .wrap{max-width:72px; margin-left:0; margin-right:auto; padding-right:0;}
-    header.scrolled nav{width:54px;}
-    nav{height:54px; padding:0 16px;}
+    header.scrolled nav{width:54px; min-width:0;}
+    nav{width:100%; min-width:0; height:54px; padding:0 16px;}
     .logo img{height:34px;}
     .nav-toggle{display:flex;}
     .navlinks{
@@ -181,8 +182,8 @@
     .hero-badge{margin-bottom:10px; font-size:13px;}
     .hero-badge .hero-name{font-size:13px;}
     h1.display{font-size:clamp(20px,6.2vw,34px); line-height:1.2;}
-    h1.display .hero-first-line{font-size:inherit;}
-    h1.display .hero-second-line{font-size:inherit;}
+    h1.display .hero-first-line{font-size:inherit; white-space:normal;}
+    h1.display .hero-second-line{font-size:inherit; white-space:normal;}
     .hero-role{margin-top:11px; font-size:10px; letter-spacing:.11em; white-space:normal;}
     html[lang="en"] h1.display .hero-first-line{white-space:normal;}
     html[lang="en"] h1.display .hero-second-line{white-space:normal; max-width:none;}
@@ -566,8 +567,8 @@
     <div class="hero-inner wrap">
       <div class="hero-copy">
         <div class="hero-badge"><span class="hero-name">Rome Ye</span></div>
-        <h1 class="display"><span class="hero-first-line">把尖端技術轉譯成價值敘事</span><span class="hero-second-line">把 AI 產品從 0 到 1 帶入市場</span></h1>
-        <div class="hero-role">AI Technical Marketing · Product Marketing · GTM</div>
+        <h1 class="display"><span class="hero-first-line">把複雜產品講成好故事</span><span class="hero-second-line">用 AI 工作流與跨國執行力帶進市場</span></h1>
+        <div class="hero-role">Brand Storytelling · Product Marketing · Launch Campaigns · AI Workflows</div>
       </div>
       <a href="#work" class="hero-cta">查看作品 →</a>
     </div>
@@ -576,11 +577,11 @@
 
 <section class="hero-intro wrap">
   <p class="lede">
-    從手機、VR、元宇宙到工業 AI，我換的是技術，不是方向：一直在做的是<strong>讓新技術被人聽懂、用起來</strong>。在 HTC 學會對門市人員、記者到電信商決策者講清楚產品；在 DaoAI 把同一套方法帶進工業 AI，以公司唯一行銷人員的身分撐起整套行銷；也自學 AI，親手做出 CRM、AI Agent，並把個人開發的 App 上架 App Store。
+    從手機、VR、元宇宙到工業 AI，我換的是技術，不是方向：一直在做的是<strong>讓好產品被人聽懂、用起來</strong>。大眾傳播新聞背景出身，在 HTC 學會把技術規格轉譯為直指人心的品牌敘事、記者會簡報與跨國發表；在 DaoAI 獨立從 0 到 1 建立整套行銷體系、SEO 關鍵字攻上 Google 第一頁；也親自動手以 AI 工具打造內部 CRM、自動化工作流，並獨立開發 iPhone App。
   </p>
   <div class="meta-row">
-    <div><div class="num">Experience</div><div class="val">13年 科技行銷<br>與第一線經驗</div></div>
-    <div><div class="num">Focus</div><div class="val">AI 技術行銷<br>產品定位與 GTM</div></div>
+    <div><div class="num">Experience</div><div class="val">13年 行銷策劃<br>與第一線經驗</div></div>
+    <div><div class="num">Focus</div><div class="val">品牌敘事 · GTM<br>產品定位與上市</div></div>
     <div><div class="num">Markets</div><div class="val">APAC／北美／澳洲<br>跨市場實戰</div></div>
     <div><div class="num">Builds</div><div class="val">自己動手做<br>CRM／AI Agent／App</div></div>
   </div>
@@ -612,7 +613,7 @@
         <div class="tag-row"><span class="tag">Tech Translation</span><span class="tag">Use Case Design</span><span class="tag">Website</span><span class="tag">Exhibition</span></div>
         <h3>ThermoVerse 深科技技術轉譯</h3>
         <div class="story">
-          <p>為美國潔淨能源公司 ThermoVerse 建置官網、做初步台灣市場調查，並在 Futex 未來科技展親自向來客介紹產品。最大的難題是技術名詞買家看不懂、應用場景不明，所以我把專利天花板熱電池（LATCHES™）轉成買家聽得懂的語言，拆出「現行服務」與「未來硬體」，以及商辦、飯店、校園、統包商與企業 ESG 脫碳 5 大使用情境。<br><a href="thermoverse-case-study.html" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">閱讀詳細分析報告 →</a></p>
+          <p>為美國潔淨能源公司 ThermoVerse 建置官網、做初步台灣市場調查，並在 Futex 未來科技展親自向來客介紹產品。最大的難題是技術名詞買家看不懂、應用場景不明，所以我把專利天花板熱電池（LATCHES™）轉成買家聽得懂的語言，梳理出「現行服務」與「未來硬體」雙軌架構，以及商辦、飯店、校園、統包商與企業 ESG 脫碳 5 大使用情境。<br><a href="thermoverse-case-study.html" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">閱讀詳細分析報告 →</a></p>
         </div>
       </div>
 
@@ -629,7 +630,7 @@
         <div class="tag-row"><span class="tag">星盤與八字命盤</span><span class="tag">對話抽偉特塔羅</span><span class="tag">情緒與決策追蹤</span><span class="tag">地端加密與隱私</span></div>
         <h3>Panny — 陪你用塔羅看懂情緒（AI 陪伴 App）</h3>
         <div class="story">
-          <p>個人獨立發起與全端打造的 iPhone AI 陪伴 App。不只建置雙語官方網站，更從 0 到 1 獨立完成完整產品迴圈：以西洋星盤與八字四柱作為對話背景、首創在對話中直接抽偉特塔羅並標記牌面細節解讀、設計每日情緒滾輪與決策歷程追蹤；技術面採用地端語音轉文字與 iCloud 端對端加密，並落實按 AI 回覆次數計費的階梯式訂閱商業模式。即將在 App Store 上架。</p>
+          <p>個人獨立發起與全端打造的 iPhone AI 陪伴 App。不只建置雙語官方網站，更從 0 到 1 獨立完成完整產品迴圈：以西洋星盤與八字四柱作為對話背景、首創在對話中直接抽偉特塔羅並標記牌面細節解讀、設計每日情緒滾輪與決策歷程追蹤；對話與命盤資料僅存放於使用者本機手機、不拿來訓練模型；落實按 AI 回覆次數計費的階梯式訂閱商業模式。個人獨立完成產品設計與全端開發。</p>
         </div>
         <a href="https://panny.n239.xyz/" target="_blank" rel="noopener noreferrer" class="app-download-btn">前往 App 下載頁 ↗</a>
       </div>
@@ -648,21 +649,21 @@
         <div class="tag-row"><span class="tag">外食拍照辨識</span><span class="tag">餐後昏沉預測</span><span class="tag">平手補償建議</span><span class="tag">身體感受趨勢</span></div>
         <h3>GlycoWave AI 飲食助手</h3>
         <div class="story">
-          <p>個人獨立發起、以 vibe coding 獨立開發的 AI 飲食助手。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。已於 2026 年 9 月上架 App Store。</p>
+          <p>個人獨立發起、以 vibe coding 獨立開發的 AI 飲食助手（已於 2026 年 9 月上架 App Store）。從產品定位、使用者流程到介面與網頁體驗皆獨立完成；使用者拍下或記錄餐點，快速看懂餐食與餐後昏沉、腦霧的關聯並獲得補償建議。定位為個人飲食習慣輔助參考，非醫療診斷或醫材。</p>
         </div>
         <a href="https://apps.apple.com/tw/app/glycowave/id6799796920" target="_blank" rel="noopener noreferrer" class="app-download-btn">前往 App Store 下載 ↗</a>
       </div>
     </div>
   </div>
 
-  <!-- CATEGORY 2: 行銷規劃 -->
+  <!-- CATEGORY 2: 行銷策劃與 GTM -->
   <div class="work-category work-cat-marketing">
     <div class="work-category-head">
       <div class="work-category-title">
         <span class="category-dot"></span>
-        <span class="category-name">行銷規劃</span>
+        <span class="category-name">行銷策劃與 GTM</span>
       </div>
-      <div class="work-category-sub">行銷策略與 GTM 推進 · Marketing Strategy &amp; GTM</div>
+      <div class="work-category-sub">行銷策略、品牌敘事與 GTM 推進 · Brand, Marketing &amp; GTM</div>
     </div>
     <div class="flagship-grid">
       <div class="flagship-item is-primary">
@@ -679,9 +680,9 @@
           <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
         </div>
         <div class="tag-row"><span class="tag">0→1 Marketing Stack</span><span class="tag">Internal CRM</span><span class="tag">AI Agent &amp; Workflow</span><span class="tag">SEO/GEO Inbound</span></div>
-        <h3>DaoAI：一個人撐起的 0→1 行銷體系</h3>
+        <h3>DaoAI：獨立完成的 0→1 行銷與品牌體系</h3>
         <div class="story">
-          <p>作為 DaoAI 唯一的行銷人員，獨立從 0 到 1 建置整套行銷體系。對外：把工業 AI 視覺檢測講成製造業客戶聽得懂的話，自己做品牌定位、三語官網、Blog、SEO/GEO 與國際展會（APEX、InnoVEX、Computex）的預約頁；對內：行銷只有我一人，以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力。客戶從看到我們、主動詢問到後續跟進，都在同一套流程裡。<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">查看 InnoVEX 展會預約落地頁 →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">查看 SkyVision 產品介紹頁 →</a></span></p>
+          <p>作為 DaoAI 唯一的行銷職能，獨立從 0 到 1 建立整套行銷與品牌體系。對外：把工業 AI 視覺檢測轉化為製造業客戶聽得懂的價值敘事，統籌品牌定位、三語官網、Blog、SEO/GEO、APEX 與 InnoVEX 展位視覺設計送印、產品手冊排版與預約頁面；對內：以 AI 工具親手打造內部 CRM 與具備審核機制的 AI Agent 自動化流程。客戶從搜尋看見、主動洽詢到後續跟進，都在同一套流程裡運作。<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">查看 InnoVEX 展會預約落地頁 →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">查看 SkyVision 產品介紹頁 →</a></span></p>
           <ul class="impact-list">
             <li>以結構化內容與 SEO/GEO 佈局：將高意圖產業關鍵字 <strong>「AI AOI」做到 Google 台灣自然搜尋第 2 名</strong>（截至 2026 年 10 月仍維持第 2），並<strong>獲生成式 AI 搜尋引擎（AI Overview / Perplexity）主動引用收錄</strong>為權威來源。</li>
             <li>以 <strong>SEO/GEO、自建 CRM 與 AI 工作流</strong> 建立 Inbound 獲客與線索管理機制，每月帶來 10+ 筆企業主動洽詢。</li>
@@ -728,9 +729,9 @@
           <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
         </div>
         <div class="tag-row"><span class="tag">Exhibition Design</span><span class="tag">Affinity</span><span class="tag">Backdrop Design</span><span class="tag">Brand System</span></div>
-        <h3>展會平面輸出與現場視覺 — APEX IPC 2026</h3>
+        <h3>展會視覺與現場設計 — APEX IPC 2026</h3>
         <div class="story">
-          <p>主導公司在APEX IPC 2026的展位設計（含背板設計輸出），並負責innoVex Computex現場展示影片與相關宣傳素材。</p>
+          <p>主導 DaoAI 在 APEX IPC 2026（美國安納罕）的展位視覺概念與大型背板完稿排版送印；並統籌 InnoVEX 與 Computex 現場展示影片及全套展會文宣素材。</p>
         </div>
       </div>
 
@@ -743,7 +744,7 @@
         <div class="tag-row"><span class="tag">Video</span><span class="tag">CapCut</span><span class="tag">AI生成畫面混剪</span></div>
         <h3>產品與品牌行銷影片</h3>
         <div class="story">
-          <p>包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，一起剪進同一支片子裡。作品包含產品介紹/短影片等形式。</p>
+          <p>包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，親自完成多支產品發布與短影音內容。</p>
         </div>
       </div>
 
@@ -755,18 +756,18 @@
           <button type="button" class="thumb-arrow next" aria-label="下一張">&#8250;</button>
         </div>
         <div class="tag-row"><span class="tag">Print &amp; Layout</span><span class="tag">Canva</span><span class="tag">Illustrator</span></div>
-        <h3>產品宣傳品設計</h3>
+        <h3>HTC U12+ 產品行銷手冊與通路賦能</h3>
         <div class="story">
-          <p>針對銷售人員設計之銷售素材，整合技術規格、品牌調性、銷售重點，助於銷售人員介紹產品。</p>
+          <p>針對旗艦機 HTC U12+ 親自排版設計一頁式產品特點手冊與競品比較，整合品牌調性、技術規格與第一線銷售話術，支援全台電信與門市通路。</p>
         </div>
       </div>
 
       <div class="work-item">
         <div class="thumb"><img src="thumb-keynote.webp" alt="Beyond Boundaries: Unleashing Business Opportunities in XR and Metaverse Frontier 簡報封面" style="object-position:center 70%" loading="lazy" decoding="async"></div>
         <div class="tag-row"><span class="tag">Keynote</span><span class="tag">Presentation Design</span><span class="tag">XR / Metaverse</span></div>
-        <h3>HTC 研討會簡報</h3>
+        <h3>HTC：跨國發表簡報、商業提案與亞太在地化</h3>
         <div class="story">
-          <p>研討會簡報，向HK Cyberport夥伴說明XR與Metaverse領域的商業機會。</p>
+          <p>主導向香港數碼港（Cyberport）夥伴與電信高層進行的 XR／元宇宙商業提案簡報；並在 HTC 期間負責 U12+ 發表會簡報、新聞稿、官方產品頁審查與 300+ 人第一線支援。</p>
         </div>
       </div>
 
@@ -832,7 +833,7 @@
 
       <article class="experience-card" data-step="3">
         <div class="chapter-meta"><span class="chapter-index">04</span><span>2025.01 – 2026.07</span></div>
-        <h3>把同一套方法帶進工業 AI，一個人撐起整套行銷</h3>
+        <h3>把同一套方法帶進工業 AI，獨立建立整套行銷體系</h3>
         <div class="chapter-org">AI Technical Marketing Lead · DaoAI Robotics</div>
         <div class="chapter-grid">
           <div class="chapter-block"><h4>面對的挑戰</h4><p>作為公司唯一的行銷人員，要讓製造業客戶看懂工業 AI 視覺檢測，並在沒有團隊的情況下從策略做到執行。</p></div>
@@ -868,7 +869,7 @@
   <div class="skill-cap-grid">
     <div class="skill-cap-col">
       <article class="skill-cap-item"><h3>快速學懂新技術</h3><p>從手機、VR、元宇宙、區塊鏈手機到工業 AOI 與生成式 AI，快速理解產品原理、應用情境與商業價值。</p><div class="tool-label">核心能力與方法論</div><div class="pill-row"><span class="pill">新技術學習</span><span class="pill">應用情境分析</span><span class="pill">IBM RAG／Agentic AI 證照</span><span class="pill">競品分析</span></div></article>
-      <article class="skill-cap-item"><h3>技術價值轉譯</h3><p>把複雜的技術規格拆成客戶決策者聽得懂的價值主張與使用情境，從工業 AI 檢測到建築節能都用得上。</p><div class="tool-label">核心能力與方法論</div><div class="pill-row"><span class="pill">技術價值轉譯</span><span class="pill">Use Case 設計</span><span class="pill">產品定位</span><span class="pill">價值主張</span></div></article>
+      <article class="skill-cap-item"><h3>技術價值轉譯</h3><p>把複雜的技術規格轉化為客戶決策者聽得懂的價值主張與使用情境，從工業 AI 檢測到建築節能都用得上。</p><div class="tool-label">核心能力與方法論</div><div class="pill-row"><span class="pill">技術價值轉譯</span><span class="pill">Use Case 設計</span><span class="pill">產品定位</span><span class="pill">價值主張</span></div></article>
       <article class="skill-cap-item"><h3>對不同的人講清楚</h3><p>大傳背景、寫過新聞與新聞稿；從門市訓練、經銷商發表會到電信商決策者簡報，中英雙語都能提案。</p><div class="tool-label">核心能力與方法論</div><div class="pill-row"><span class="pill">中英雙語簡報</span><span class="pill">新聞稿</span><span class="pill">產品訓練</span><span class="pill">發表會</span></div></article>
     </div>
     <div class="skill-cap-col">
@@ -887,6 +888,7 @@
       <div class="contact-links">
         <a href="mailto:srs0319@gmail.com">寄 Email</a>
         <a href="https://www.linkedin.com/in/rome-ye/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/srs0319" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="footer-grid">
@@ -913,15 +915,15 @@
     var translations = {
       zh: {
         lang: 'zh-Hant',
-        title: 'Rome Ye | AI Technical Marketing',
+        title: 'Rome Ye | 品牌敘事 · 產品行銷 · AI 工作流',
         toggleLabel: 'EN',
         toggleAria: 'Switch to English',
         expOpen: '展開更多經歷',
         expClose: '收合經歷',
         text: {
-          'h1.display': '<span class="hero-first-line">把尖端技術轉譯成價值敘事</span><span class="hero-second-line">把 AI 產品從 0 到 1 帶入市場</span>',
+          'h1.display': '<span class="hero-first-line">把複雜產品講成好故事</span><span class="hero-second-line">用 AI 工作流與跨國執行力帶進市場</span>',
           '.hero-cta': '查看作品 →',
-          '.hero-intro .lede': '從手機、VR、元宇宙到工業 AI，我換的是技術，不是方向：一直在做的是<strong>讓新技術被人聽懂、用起來</strong>。在 HTC 學會對門市人員、記者到電信商決策者講清楚產品；在 DaoAI 把同一套方法帶進工業 AI，以公司唯一行銷人員的身分撐起整套行銷；也自學 AI，親手做出 CRM、AI Agent，並把個人開發的 App 上架 App Store。',
+          '.hero-intro .lede': '從手機、VR、元宇宙到工業 AI，我換的是技術，不是方向：一直在做的是<strong>讓好產品被人聽懂、用起來</strong>。大眾傳播新聞背景出身，在 HTC 學會把技術規格轉譯為直指人心的品牌敘事、記者會簡報與跨國發表；在 DaoAI 獨立從 0 到 1 建立整套行銷體系、SEO 關鍵字攻上 Google 第一頁；也親自動手以 AI 工具打造內部 CRM、自動化工作流，並獨立開發 iPhone App。',
           '#work h2': '代表作品',
           '#experience h2': '我如何讓技術被真正採用',
           '.experience-intro': '從把技術講成第一線說得出口的話，到設計流程、推動區域 GTM，再到建置 AI 工作流；每一段經歷都在回答同一個問題：怎麼讓人真的願意用。',
@@ -929,8 +931,8 @@
           '#contact h2': '一起聊聊<br>下一個挑戰',
           '.work-cat-planning .category-name': '技術轉譯與產品',
           '.work-cat-planning .work-category-sub': '把新技術講清楚、做出來 · Tech Translation &amp; Product',
-          '.work-cat-marketing .category-name': '行銷規劃',
-          '.work-cat-marketing .work-category-sub': '行銷策略與 GTM 推進 · Marketing Strategy &amp; GTM',
+          '.work-cat-marketing .category-name': '行銷策劃與 GTM',
+          '.work-cat-marketing .work-category-sub': '行銷策略、品牌敘事與 GTM 推進 · Brand, Marketing &amp; GTM',
           '.work-cat-media .category-name': '多媒體產出',
           '.work-cat-media .work-category-sub': '視覺設計與動態內容 · Multimedia &amp; Creative Production'
         },
@@ -938,9 +940,9 @@
           'header .navlinks a': ['作品', '經歷', '技能', '聯絡我'],
           '.footer-links a': ['作品', '經歷', '技能'],
           '.hero-intro .meta-row .num': ['Experience', 'Focus', 'Markets', 'Builds'],
-          '.hero-intro .meta-row .val': ['13年 科技行銷<br>與第一線經驗', 'AI 技術行銷<br>產品定位與 GTM', 'APAC／北美／澳洲<br>跨市場實戰', '自己動手做<br>CRM／AI Agent／App'],
+          '.hero-intro .meta-row .val': ['13年 行銷策劃<br>與第一線經驗', '品牌敘事 · GTM<br>產品定位與上市', 'APAC／北美／澳洲<br>跨市場實戰', '自己動手做<br>CRM／AI Agent／App'],
           '.rail-step span': ['技術轉譯', '第一線經營', '區域GTM', '自己動手做', '下一階段'],
-          '.experience-card h3': ['把規格變成第一線說得出口的價值', '讓制度在第一線真正運作', '讓新技術找到第一批採用者', '把同一套方法帶進工業 AI，一個人撐起整套行銷', '讓台灣做的 AI 產品，被市場聽懂、採用'],
+          '.experience-card h3': ['把規格變成第一線說得出口的價值', '讓制度在第一線真正運作', '讓新技術找到第一批採用者', '把同一套方法帶進工業 AI，獨立建立整套行銷體系', '讓台灣做的 AI 產品，被市場聽懂、採用'],
           '.chapter-org': ['Trainer → Product Marketing Specialist · HTC', 'Store Manager → HR Manager · Elephone ／ Area Manager · T-Shine Case · Australia', 'Product Marketing Manager &amp; Business Development Manager, APAC · HTC', 'AI Technical Marketing Lead · DaoAI Robotics', 'Tech Translation × Product Marketing × Go-to-Market'],
           '.chapter-block h4': ['面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '下一階段'],
           '.chapter-block p': ['讓複雜科技產品被市場、媒體、通路與消費者正確理解。', '學會把產品規格轉成銷售人員說得出口的賣點，讓功能成為使用情境與客戶利益。', '直接承擔顧客體驗、團隊管理、轉換率與營收結果。', '用數據、流程與團隊協作改善現場執行；制度必須讓第一線記得住、願意做，才會產生結果。', '讓 VR 與元宇宙等新技術，成為東南亞市場、代理商與合作夥伴願意推動的 GTM 方案。', '以代理商經營、在地市場開發與跨部門協作，推動第一批示範者並帶動營收季增40%。', '作為公司唯一的行銷人員，要讓製造業客戶看懂工業 AI 視覺檢測，並在沒有團隊的情況下從策略做到執行。', '把 HTC 讓第一線聽懂產品的方法帶進工業 AI；以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力；把關鍵字「AI AOI」做到 Google 台灣自然搜尋第 2 名並獲 AI 收錄，官網每月帶來 10+ 筆自然詢問。', '我回到台灣，是想投身台灣的 AI 應用產業：把技術轉成產品、讓產品被市場聽懂與採用，並帶向國際市場。'],
@@ -950,19 +952,19 @@
           '.cap-item h4': ['品牌敘事策略', 'GTM在地化執行', '跨文化溝通談判', '產品技術 → 價值敘事', 'Vibe Coding／AI Agent建置', '展場視覺與影片產出'],
           '.cap-item p': [
             '把複雜的技術規格轉成客戶聽得懂、買得下手的故事，讓工程團隊的語言變成業務能用的武器。',
-            '獨立扛過負責（含東南亞）與中國市場的落地執行，從策略制定到素材產出，帶動實際營收成長。',
+            '獨立主導亞太（含東南亞）與中國市場的落地執行，從策略制定到素材產出，帶動實際營收成長。',
             '中英雙語，能向電信、代理商與合作夥伴的決策者進行產品與商業提案，也熟悉台灣與中國兩地的溝通與規範差異。',
             '把AI工業檢測系統的技術特徵，轉化為製造業客戶能理解、願意買單的價值敘事。',
             '不是工程師，但能獨立打造CRM系統、具備human-in-the-loop審核機制的LinkedIn發文AI Agent，以及公司官網。',
             '從資訊架構、版面設計到影片剪輯，一個人完成從內容到視覺的產出，不必等工程師或外包設計師接手。'
           ],
           '.flagship-label': ['Tech Translation · 01', 'Product · 02 · 個人專案', 'Product · 03 · 個人專案', 'Marketing &amp; GTM · 01'],
-          '.flagship-item h3': ['ThermoVerse 深科技技術轉譯', 'Panny — 陪你用塔羅看懂情緒（AI 陪伴 App）', 'GlycoWave AI 飲食助手', 'DaoAI：一個人撐起的 0→1 行銷體系'],
+          '.flagship-item h3': ['ThermoVerse 深科技技術轉譯', 'Panny — 陪你用塔羅看懂情緒（AI 陪伴 App）', 'GlycoWave AI 飲食助手', 'DaoAI：獨立完成的 0→1 行銷與品牌體系'],
           '.flagship-item .story p': [
-            '為美國潔淨能源公司 ThermoVerse 建置官網、做初步台灣市場調查，並在 Futex 未來科技展親自向來客介紹產品。最大的難題是技術名詞買家看不懂、應用場景不明，所以我把專利天花板熱電池（LATCHES™）轉成買家聽得懂的語言，拆出「現行服務」與「未來硬體」，以及商辦、飯店、校園、統包商與企業 ESG 脫碳 5 大使用情境。<br><a href="thermoverse-case-study.html" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">閱讀詳細分析報告 →</a>',
-            '個人獨立發起與全端打造的 iPhone AI 陪伴 App。不只建置雙語官方網站，更從 0 到 1 獨立完成完整產品迴圈：以西洋星盤與八字四柱作為對話背景、首創在對話中直接抽偉特塔羅並標記牌面細節解讀、設計每日情緒滾輪與決策歷程追蹤；技術面採用地端語音轉文字與 iCloud 端對端加密，並落實按 AI 回覆次數計費的階梯式訂閱商業模式。即將在 App Store 上架。',
-            '個人獨立發起、以 vibe coding 獨立開發的 AI 飲食助手。從產品定位、使用流程到介面與網頁體驗，皆由我獨立完成；使用者拍下或寫下每一餐，快速看懂餐點組合與下午昏沉、嘴饞或腦霧的關係，並獲得下一餐可執行的建議。已於 2026 年 9 月上架 App Store。',
-            '作為 DaoAI 唯一的行銷人員，獨立從 0 到 1 建置整套行銷體系。對外：把工業 AI 視覺檢測講成製造業客戶聽得懂的話，自己做品牌定位、三語官網、Blog、SEO/GEO 與國際展會（APEX、InnoVEX、Computex）的預約頁；對內：行銷只有我一人，以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力。客戶從看到我們、主動詢問到後續跟進，都在同一套流程裡。<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">查看 InnoVEX 展會預約落地頁 →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">查看 SkyVision 產品介紹頁 →</a></span>'
+            '為美國潔淨能源公司 ThermoVerse 建置官網、做初步台灣市場調查，並在 Futex 未來科技展親自向來客介紹產品。最大的難題是技術名詞買家看不懂、應用場景不明，所以我把專利天花板熱電池（LATCHES™）轉成買家聽得懂的語言，梳理出「現行服務」與「未來硬體」雙軌架構，以及商辦、飯店、校園、統包商與企業 ESG 脫碳 5 大使用情境。<br><a href="thermoverse-case-study.html" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">閱讀詳細分析報告 →</a>',
+            '個人獨立發起與全端打造的 iPhone AI 陪伴 App。不只建置雙語官方網站，更從 0 到 1 獨立完成完整產品迴圈：以西洋星盤與八字四柱作為對話背景、首創在對話中直接抽偉特塔羅並標記牌面細節解讀、設計每日情緒滾輪與決策歷程追蹤；對話與命盤資料僅存放於使用者本機手機、不拿來訓練模型；落實按 AI 回覆次數計費的階梯式訂閱商業模式。個人獨立完成產品設計與全端開發。',
+            '個人獨立發起、以 vibe coding 獨立開發的 AI 飲食助手（已於 2026 年 9 月上架 App Store）。從產品定位、使用者流程到介面與網頁體驗皆獨立完成；使用者拍下或記錄餐點，快速看懂餐食與餐後昏沉、腦霧的關聯並獲得補償建議。定位為個人飲食習慣輔助參考，非醫療診斷或醫材。',
+            '作為 DaoAI 唯一的行銷職能，獨立從 0 到 1 建立整套行銷與品牌體系。對外：把工業 AI 視覺檢測轉化為製造業客戶聽得懂的價值敘事，統籌品牌定位、三語官網、Blog、SEO/GEO、APEX 與 InnoVEX 展位視覺設計送印、產品手冊排版與預約頁面；對內：以 AI 工具親手打造內部 CRM 與具備審核機制的 AI Agent 自動化流程。客戶從搜尋看見、主動洽詢到後續跟進，都在同一套流程裡運作。<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">查看 InnoVEX 展會預約落地頁 →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">查看 SkyVision 產品介紹頁 →</a></span>'
           ],
           '.impact-list li': [
             '以結構化內容與 SEO/GEO 佈局：將高意圖產業關鍵字 <strong>「AI AOI」做到 Google 台灣自然搜尋第 2 名</strong>（截至 2026 年 10 月仍維持第 2），並<strong>獲生成式 AI 搜尋引擎（AI Overview / Perplexity）主動引用收錄</strong>為權威來源。',
@@ -971,12 +973,12 @@
           ],
           '.performance-context': ['Google Search Console · 近三個月 · 台灣'],
           '.performance-label': ['自然搜尋點擊', '搜尋曝光', '平均點閱率', '平均排名'],
-          '.work-item h3': ['展會平面輸出與現場視覺 — APEX IPC 2026', '產品與品牌行銷影片', '產品宣傳品設計', 'HTC 研討會簡報'],
+          '.work-item h3': ['展會視覺與現場設計 — APEX IPC 2026', '產品與品牌行銷影片', 'HTC U12+ 產品行銷手冊與通路賦能', 'HTC：跨國發表簡報、商業提案與亞太在地化'],
           '.work-item .story p': [
-            '主導公司在APEX IPC 2026的展位設計（含背板設計輸出），並負責innoVex Computex現場展示影片與相關宣傳素材。',
-            '包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，一起剪進同一支片子裡。作品包含產品介紹/短影片等形式。',
-            '針對銷售人員設計之銷售素材，整合技術規格、品牌調性、銷售重點，助於銷售人員介紹產品。',
-            '研討會簡報，向HK Cyberport夥伴說明XR與Metaverse領域的商業機會。'
+            '主導 DaoAI 在 APEX IPC 2026（美國安納罕）的展位視覺概念與大型背板完稿排版送印；並統籌 InnoVEX 與 Computex 現場展示影片及全套展會文宣素材。',
+            '包辦腳本、拍攝、剪輯，並利用AI工具生成的畫面混合實拍素材，親自完成多支產品發布與短影音內容。',
+            '針對旗艦機 HTC U12+ 親自排版設計一頁式產品特點手冊與競品比較，整合品牌調性、技術規格與第一線銷售話術，支援全台電信與門市通路。',
+            '主導向香港數碼港（Cyberport）夥伴與電信高層進行的 XR／元宇宙商業提案簡報；並在 HTC 期間負責 U12+ 發表會簡報、新聞稿、官方產品頁審查與 300+ 人第一線支援。'
           ],
           '#work .tag': ['Tech Translation', 'Use Case Design', 'Website', 'Exhibition', '星盤與八字命盤', '對話抽偉特塔羅', '情緒與決策追蹤', '地端加密與隱私', '外食拍照辨識', '餐後昏沉預測', '平手補償建議', '身體感受趨勢', '0→1 Marketing Stack', 'Internal CRM', 'AI Agent &amp; Workflow', 'SEO/GEO Inbound', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI生成畫面混剪', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
           '.app-download-btn': ['前往 App 下載頁 ↗', '前往 App Store 下載 ↗'],
@@ -1004,7 +1006,7 @@
           '.skill-cap-item h3': ['快速學懂新技術', '技術價值轉譯', '對不同的人講清楚', '自己動手做產品與工具', '讓客戶主動找上門', '從規劃到成品親手交付'],
           '.skill-cap-item > p': [
             '從手機、VR、元宇宙、區塊鏈手機到工業 AOI 與生成式 AI，快速理解產品原理、應用情境與商業價值。',
-            '把複雜的技術規格拆成客戶決策者聽得懂的價值主張與使用情境，從工業 AI 檢測到建築節能都用得上。',
+            '把複雜的技術規格轉化為客戶決策者聽得懂的價值主張與使用情境，從工業 AI 檢測到建築節能都用得上。',
             '大傳背景、寫過新聞與新聞稿；從門市訓練、經銷商發表會到電信商決策者簡報，中英雙語都能提案。',
             '自學 AI 與 vibe coding，親手做出 CRM 與有人工審核的 AI Agent，並獨立開發 GlycoWave 上架 App Store。',
             '整合官網、SEO/GEO、LinkedIn 廣告、展會與 CRM 跟進，建立 Inbound 流程；也做過亞太市場在地化與代理商推廣。',
@@ -1019,20 +1021,20 @@
             'SEO/GEO', '展會 GTM', 'APAC 在地化', 'LinkedIn 廣告',
             '展位設計', '影片剪輯', '手冊排版', '優先順序判斷'
           ],
-          '.contact-links a': ['寄 Email', 'LinkedIn']
+          '.contact-links a': ['寄 Email', 'LinkedIn', 'GitHub']
         }
       },
       en: {
         lang: 'en',
-        title: 'Rome Ye | AI Technical Marketing',
-        toggleLabel: '中',
-        toggleAria: 'Switch to Chinese',
+        title: 'Rome Ye | Brand Storytelling, Product Marketing & AI Workflows',
+        toggleLabel: '繁中',
+        toggleAria: 'Switch to Traditional Chinese',
         expOpen: 'Show more experience',
         expClose: 'Collapse experience',
         text: {
-          'h1.display': '<span class="hero-first-line">Translating deep tech into value narratives,</span><span class="hero-second-line">and taking AI products from 0 to 1.</span>',
+          'h1.display': '<span class="hero-first-line">Brand Storytelling &amp; Product Marketing</span><span class="hero-second-line">Turning complex products into clear launches and AI-enabled growth</span>',
           '.hero-cta': 'View Work →',
-          '.hero-intro .lede': 'From smartphones and VR to the metaverse and industrial AI, I have changed technologies, not direction: what I have always done is <strong>help people understand new technology and put it to use</strong>. At HTC, I learned to explain products clearly to everyone from retail staff and journalists to telecom decision-makers. At DaoAI, I brought the same approach to industrial AI and ran the entire marketing function as the company\'s only marketer. I also taught myself AI and built a CRM and an AI Agent myself, and published an app I developed independently on the App Store.',
+          '.hero-intro .lede': 'From smartphones and VR to the metaverse and industrial AI, I have changed technologies, not direction: what I have always done is <strong>help people understand great products and put them to use</strong>. Trained in mass communication and journalism, I learned at HTC to translate technical specs into compelling brand narratives, press keynotes, and regional launches; at DaoAI, I built the entire marketing system from 0 to 1 and ranked core keywords on Google page one; I also hands-on built an internal CRM, AI workflows, and independently developed iPhone apps.',
           '#work h2': 'Selected Work',
           '#experience h2': 'How I make technology truly adopted',
           '.experience-intro': 'From making technology easy for frontline teams to explain, to designing processes, leading regional GTM, and building AI workflows—every chapter answers the same question: how do you make people genuinely want to use it?',
@@ -1040,8 +1042,8 @@
           '#contact h2': 'Let\'s talk about<br>the next challenge.',
           '.work-cat-planning .category-name': 'Tech Translation &amp; Product',
           '.work-cat-planning .work-category-sub': 'Explaining new tech clearly, and building it',
-          '.work-cat-marketing .category-name': 'Marketing &amp; GTM',
-          '.work-cat-marketing .work-category-sub': 'Strategy, Narrative &amp; Acquisition',
+          '.work-cat-marketing .category-name': 'Brand, Marketing &amp; GTM',
+          '.work-cat-marketing .work-category-sub': 'Strategy, Narrative, Launch &amp; Acquisition',
           '.work-cat-media .category-name': 'Multimedia Production',
           '.work-cat-media .work-category-sub': 'Visual Design &amp; Motion Assets'
         },
@@ -1049,9 +1051,9 @@
           'header .navlinks a': ['Work', 'Experience', 'Skills', 'Contact Me'],
           '.footer-links a': ['Work', 'Experience', 'Skills'],
           '.hero-intro .meta-row .num': ['Experience', 'Focus', 'Markets', 'Builds'],
-          '.hero-intro .meta-row .val': ['13 years in tech marketing<br>&amp; frontline roles', 'AI technical marketing<br>Positioning &amp; GTM', 'APAC / North America / Australia<br>Cross-market execution', 'Hands-on builds<br>CRM / AI Agent / App'],
+          '.hero-intro .meta-row .val': ['13 years in marketing<br>&amp; frontline leadership', 'Brand Storytelling &amp; GTM<br>Launch &amp; Positioning', 'APAC / North America / Australia<br>Cross-market execution', 'Hands-on builds<br>CRM / AI Agent / App'],
           '.rail-step span': ['Technical Translation', 'Frontline Operations', 'Regional GTM', 'Hands-On Builds', 'What Comes Next'],
-          '.experience-card h3': ['Turning specifications into frontline value', 'Making systems work on the frontline', 'Finding early adopters for new technology', 'Bringing the same approach to industrial AI, running all of marketing single-handedly', 'Helping AI products built in Taiwan get understood and adopted'],
+          '.experience-card h3': ['Turning specifications into frontline value', 'Making systems work on the frontline', 'Finding early adopters for new technology', 'Bringing the same approach to industrial AI, running the marketing function single-handedly', 'Helping AI products built in Taiwan get understood and adopted'],
           '.chapter-org': ['Trainer → Product Marketing Specialist · HTC', 'Store Manager → HR Manager · Elephone ／ Area Manager · T-Shine Case · Australia', 'Product Marketing Manager &amp; Business Development Manager, APAC · HTC', 'AI Technical Marketing Lead · DaoAI Robotics', 'Tech Translation × Product Marketing × Go-to-Market'],
           '.chapter-block h4': ['The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Next Stage'],
           '.chapter-block p': ['Help markets, media, channels, and customers understand complex technology accurately.', 'I learned to turn product specifications into selling points sales teams can say, making features relevant to use cases and customer benefits.', 'Take direct responsibility for customer experience, team performance, conversion, and revenue.', 'I learned that systems only create results when frontline teams can remember them and want to use them.', 'Make emerging VR and metaverse technology into GTM programs that Southeast Asian markets, distributors, and partners would be willing to advance.', 'Used distributor management, local market development, and cross-functional collaboration to activate early adopters, contributing to 40% quarter-over-quarter revenue growth.', 'As the company\'s only marketer, help manufacturing customers understand industrial AI visual inspection, and take marketing from strategy to execution without a team.', 'Brought the approach I used at HTC to help frontline teams understand products into industrial AI; used self-taught AI to build a CRM and an AI Agent with human review to fill the staffing gap; ranked the core keyword "AI AOI" #2 on Google Taiwan organic search with Generative AI citations, bringing in 10+ organic enterprise inquiries per month.', 'I came back to Taiwan to work in its AI application industry: turning technology into products, helping the market understand and adopt them, and taking them to international markets.'],
@@ -1068,12 +1070,12 @@
             'From information architecture and layout design to video editing, I can produce content and visuals without waiting on engineering or outsourced design.'
           ],
           '.flagship-label': ['Tech Translation · 01', 'Product · 02 · Independent Project', 'Product · 03 · Independent Project', 'Marketing &amp; GTM · 01'],
-          '.flagship-item h3': ['ThermoVerse Deep-Tech Translation', 'Panny — Tarot & Emotional Companion AI App', 'GlycoWave AI Nutrition Assistant', 'DaoAI: A 0→1 Marketing Function, Run Single-Handedly'],
+          '.flagship-item h3': ['ThermoVerse Deep-Tech Translation', 'Panny — Tarot & Emotional Companion AI App', 'GlycoWave AI Nutrition Assistant', 'DaoAI: A 0→1 Marketing &amp; Brand System, Run Single-Handedly'],
           '.flagship-item .story p': [
             'For ThermoVerse, a US clean-energy company, I built the website, ran initial Taiwan market research, and presented the product to visitors in person at the Futex exhibition. The core problems were technical terms buyers could not follow and unclear applications, so I translated its patented drop-ceiling thermal battery (LATCHES™) into language buyers understand, separating current services from future hardware and defining 5 use cases: commercial offices, hotels, campuses, contractors, and corporate ESG decarbonization.<br><a href="thermoverse-case-study.html" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">Read Full Case Study →</a>',
-            'An independent consumer AI product spanning a native iOS app and bilingual landing page. From 0 to 1, I architected the full product loop: integrating Western astrology and BaZi charts as LLM context to ground conversations, designing in-chat Rider-Waite tarot drawing with visual landmark interpretation, and structuring daily mood-naming and decision trackers. Engineered local-first speech-to-text, client-side iCloud Keychain encryption, and a tiered token-based subscription monetization model. Launching soon on the App Store.',
-            'An independent personal product, developed on my own with vibe coding. From product positioning and user journey to UI and web development, I executed every layer independently. Users photograph or describe a meal to understand how food choices correlate with fatigue or brain fog, receiving actionable guidance for their next meal. Launched on the App Store in September 2026.',
-            'As the only marketer at DaoAI, built the entire marketing system from 0 to 1. Externally: explained industrial visual AI in language manufacturing buyers understand, and built the brand positioning, trilingual website, blog, SEO/GEO content and trade-show booking pages (APEX, InnoVEX, Computex) myself. Internally: as the only marketer, used self-taught AI to build a CRM and an AI Agent with human review to fill the staffing gap. From first discovery to inbound inquiry to follow-up, every customer moved through one connected process.<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">View InnoVEX Campaign Page →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">View SkyVision Product Page →</a></span>'
+            'An independent consumer AI product spanning a native iOS app and bilingual landing page. From 0 to 1, I architected the full product loop: integrating Western astrology and BaZi charts as LLM context to ground conversations, designing in-chat Rider-Waite tarot drawing with visual landmark interpretation, and structuring daily mood-naming and decision trackers. Conversation and chart data stay strictly on-device with no model training, paired with a tiered token-based subscription model. Independently designed and built end-to-end.',
+            'An independent personal product, developed on my own with vibe coding (launched on the App Store in September 2026). From product positioning and user journey to UI and web development, I executed every layer independently. Users photograph or log meals to understand how food choices correlate with post-meal fatigue or brain fog and receive actionable next-meal guidance. Built as a personal eating-habit reference, not for medical diagnosis or as a medical device.',
+            'As the sole marketer at DaoAI, built the entire marketing and brand system from 0 to 1. Externally: translated industrial visual AI into value narratives manufacturing buyers understand, owning brand positioning, trilingual website, blog, SEO/GEO, APEX and InnoVEX booth design to print production, product brochure layout, and booking pages. Internally: hands-on built an internal CRM and a human-in-the-loop AI Agent workflow. From search discovery to inbound inquiry to follow-up, every customer moved through one connected process.<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">View InnoVEX Campaign Page →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">View SkyVision Product Page →</a></span>'
           ],
           '.impact-list li': [
             'Architected category-defining content and SEO/GEO structured data: propelled the high-intent keyword <strong>"AI AOI" to #2 organic rank on Google Taiwan</strong> (retained as of Oct 2026) and <strong>earned direct citation in Generative AI engines (AI Overviews, Perplexity)</strong>.',
@@ -1082,12 +1084,12 @@
           ],
           '.performance-context': ['Google Search Console · Last 3 months · Taiwan'],
           '.performance-label': ['Organic Clicks', 'Search Impressions', 'Average CTR', 'Average Position'],
-          '.work-item h3': ['Trade Show Print &amp; On-Site Visuals — APEX IPC 2026', 'Product &amp; Brand Marketing Videos', 'Product Collateral Design', 'HTC Seminar Presentation'],
+          '.work-item h3': ['Trade Show Visual Design &amp; Production — APEX IPC 2026', 'Product &amp; Brand Marketing Videos', 'HTC U12+ Launch Collateral &amp; Sales Enablement', 'HTC: Regional Keynotes, Commercial Pitches &amp; APAC Localization'],
           '.work-item .story p': [
-            'Led booth visual design for APEX IPC 2026, including backdrop production, and supported innoVEX Computex with demo videos and promotional assets.',
-            'Owned scripting, shooting, and editing, combining AI-generated visuals with live footage for product introductions and short-form videos.',
-            'Designed sales enablement materials that connect technical specifications, brand tone, and sales priorities for frontline teams.',
-            'Designed a seminar presentation for HK Cyberport partners on business opportunities in XR and the metaverse.'
+            'Led booth visual concept and large-scale backdrop print production for DaoAI at APEX IPC 2026 (Anaheim, US); produced demo videos and full trade-show collateral for InnoVEX and Computex.',
+            'Owned scripting, shooting, and editing, combining AI-generated visuals with live footage to produce multiple product launch and short-form videos.',
+            'Designed and laid out the one-page product feature sheet and competitive comparison for the flagship HTC U12+, aligning brand tone, technical specs, and frontline sales messaging across Taiwan telecom and retail channels.',
+            'Led XR and metaverse commercial pitch decks for HK Cyberport partners and telecom executives; also owned HTC U12+ launch keynote slides, press releases, official product page QA, and frontline support for 300+ retail staff.'
           ],
           '#work .tag': ['Tech Translation', 'Use Case Design', 'Website', 'Exhibition', 'Astrology &amp; BaZi', 'In-Chat Tarot', 'Mood &amp; Decision Tracker', 'Local-First Privacy', 'Photo Food Logging', 'Fatigue &amp; GI Prediction', 'Meal Balancing Advice', 'Body State Trends', '0→1 Marketing Stack', 'Internal CRM', 'AI Agent &amp; Workflow', 'SEO/GEO Inbound', 'Exhibition Design', 'Affinity', 'Backdrop Design', 'Brand System', 'Video', 'CapCut', 'AI-Generated Mixed Footage', 'Print &amp; Layout', 'Canva', 'Illustrator', 'Keynote', 'Presentation Design', 'XR / Metaverse'],
           '.app-download-btn': ['Get the App ↗', 'Download on App Store ↗'],
@@ -1130,12 +1132,14 @@
             'SEO/GEO', 'Trade Show GTM', 'APAC Localization', 'LinkedIn Ads',
             'Booth Design', 'Video Editing', 'Brochure Layout', 'Prioritization'
           ],
-          '.contact-links a': ['Email', 'LinkedIn']
+          '.contact-links a': ['Email', 'LinkedIn', 'GitHub']
         }
       }
     };
 
-    var activeLang = localStorage.getItem('siteLang') === 'en' ? 'en' : 'zh';
+    var storedLang = localStorage.getItem('siteLang');
+    var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var activeLang = storedLang ? (storedLang === 'en' ? 'en' : 'zh') : (browserLang.startsWith('zh') ? 'zh' : 'en');
     var langToggle = document.getElementById('langToggle');
 
     function updateExpToggleLabel() {
@@ -1146,9 +1150,9 @@
       expToggleEl.querySelector('span:first-child').textContent = label;
     }
 
-    function applyLanguage(lang) {
+    function applyLanguage(lang, persist) {
       activeLang = lang;
-      localStorage.setItem('siteLang', lang);
+      if (persist) localStorage.setItem('siteLang', lang);
       var copy = translations[lang];
       document.documentElement.lang = copy.lang;
       document.title = copy.title;
@@ -1170,7 +1174,7 @@
 
     if (langToggle) {
       langToggle.addEventListener('click', function () {
-        applyLanguage(activeLang === 'zh' ? 'en' : 'zh');
+        applyLanguage(activeLang === 'zh' ? 'en' : 'zh', true);
         if (navLinks && navToggle) {
           navLinks.classList.remove('open');
           navToggle.classList.remove('open');
@@ -1224,7 +1228,7 @@
         });
       });
     }
-    applyLanguage(activeLang);
+    applyLanguage(activeLang, false);
 
     var heroVideo = document.querySelector('.hero-video');
     if (heroVideo) {
