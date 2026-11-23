@@ -525,6 +525,17 @@
     transition:background .2s ease, color .2s ease;
   }
   .contact-links a:hover{background:var(--ink); color:#fff;}
+  .work-modes-section{margin-top:52px; padding-top:36px; border-top:1px solid var(--line);}
+  .work-modes-kicker{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:20px;}
+  .work-modes-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .work-mode-card{
+    background:rgba(255,255,255,.78); border:1px solid rgba(17,24,39,.12); border-radius:10px;
+    padding:22px 24px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  }
+  .work-mode-num{display:block; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:#b45309; margin-bottom:8px;}
+  .work-mode-card h3{font-size:16px; font-weight:700; line-height:1.35; color:var(--ink); margin-bottom:10px;}
+  .work-mode-card p{font-size:13px; line-height:1.65; color:var(--muted); margin:0;}
+  @media(max-width:760px){.work-modes-grid{grid-template-columns:1fr; gap:14px;} .work-mode-card{padding:18px 20px;}}
   .footer-grid{display:flex; justify-content:space-between; align-items:center; gap:24px; margin-top:64px; padding-top:32px; border-top:1px solid var(--line); flex-wrap:wrap;}
   .footer-col h4{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px;}
   .footer-logo{height:40px; width:auto; display:block;}
@@ -716,7 +727,7 @@
         <div class="tag-row"><span class="tag">Brand Storytelling</span><span class="tag">Information Architecture</span><span class="tag">OMO &amp; Conversion Funnel</span><span class="tag">Interactive UX</span></div>
         <h3>台北雙星（Taipei Twins）品牌官網概念重塑提案</h3>
         <div class="story">
-          <p>為台灣指標性複合開發案「台北雙星」獨立設計的品牌官網概念重塑提案（Concept Redesign Demo）。針對原站資訊架構分散與轉換路徑不明的痛點，重新梳理「雙星願景、頂級商辦、奢華商場、360° 觀景台、雙星脈動」五大核心敘事；導入商辦租賃與商場招商分流漏斗、六鐵共構互動式時間半徑地圖、四語切換及 2026 工程里程碑模組，將地標品牌價值轉化為可執行的數位獲客體驗。<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">造訪概念官網展示 →</a></p>
+          <p>主動發起的概念官網重塑提案（Concept Redesign Demo）：不用等開缺，直接從品牌與使用者視角診斷原站資訊架構分散與轉換斷點，獨立重構「雙星願景、頂級商辦、奢華商場、360° 觀景台、雙星脈動」五大敘事；導入商辦租賃與商場招商分流漏斗、六鐵共構互動式時間半徑地圖、四語切換及 2026 工程里程碑模組。<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">造訪概念官網展示 →</a></p>
         </div>
       </div>
     </div>
@@ -849,7 +860,7 @@
         <div class="chapter-org">AI Technical Marketing Lead · DaoAI Robotics</div>
         <div class="chapter-grid">
           <div class="chapter-block"><h4>面對的挑戰</h4><p>作為公司唯一的行銷人員，要讓製造業客戶看懂工業 AI 視覺檢測，並在沒有團隊的情況下從策略做到執行。</p></div>
-          <div class="chapter-block"><h4>我獲得什麼</h4><p>把 HTC 讓第一線聽懂產品的方法帶進工業 AI；以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力；把關鍵字「AI AOI」做到 Google 台灣自然搜尋第 2 名並獲 AI 收錄，官網每月帶來 10+ 筆自然詢問。</p></div>
+          <div class="chapter-block"><h4>我獲得什麼</h4><p>把 HTC 讓第一線聽懂產品的方法帶進工業 AI；以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力；把關鍵字「AI AOI」做到 Google 台灣自然搜尋第 2 名（截至 2026 年 10 月）並獲 AI 收錄，官網每月帶來 10+ 筆自然詢問。</p></div>
         </div>
         <div class="carry-label">Carry forward</div>
         <div class="carry-tags"><span class="carry-tag">Technical Translation</span><span class="carry-tag">SEO/GEO Inbound</span><span class="carry-tag">AI Agent &amp; CRM</span><span class="carry-tag">Exhibition GTM</span></div>
@@ -857,9 +868,9 @@
 
       <article class="experience-card future-card" data-step="4">
         <div class="chapter-meta"><span class="chapter-index">NEXT</span><span>What I want to build next</span></div>
-        <h3>讓台灣做的 AI 產品，被市場聽懂、採用</h3>
+        <h3>讓好產品跨出語言與技術門檻，被市場聽懂並採用</h3>
         <div class="chapter-org">Tech Translation × Product Marketing × Go-to-Market</div>
-        <div class="chapter-grid"><div class="chapter-block"><h4>下一階段</h4><p>我回到台灣，是想投身台灣的 AI 應用產業：把技術轉成產品、讓產品被市場聽懂與採用，並帶向國際市場。</p></div></div>
+        <div class="chapter-grid"><div class="chapter-block"><h4>下一階段</h4><p>聚焦亞太與全球遠端／跨區合作，協助科技與品牌團隊把複雜產品轉譯成清楚的品牌故事、GTM 上市節奏與可落地的 AI 工作流，推向國際市場。</p></div></div>
         <div class="future-directions">
           <div class="future-direction"><span>01</span><h4>Explain the Technology</h4><p>把 AI 產品的技術講成客戶聽得懂、願意試的價值與使用情境。</p></div>
           <div class="future-direction"><span>02</span><h4>Build to Learn</h4><p>自己動手做工具與原型，從實作理解技術與使用者，讓想法接受驗證。</p></div>
@@ -898,9 +909,29 @@
     <div class="contact-grid">
       <h2 class="serif">一起聊聊<br>下一個挑戰</h2>
       <div class="contact-links">
-        <a href="mailto:srs0319@gmail.com">寄 Email</a>
+        <a href="mailto:srs0319@gmail.com?subject=Intro%20%2F%20Pilot%20Brief%20%E2%80%94%20Rome%20Ye">預約 15 分鐘聊聊 / 專案提案</a>
         <a href="https://www.linkedin.com/in/rome-ye/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/srs0319" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="work-modes-section">
+      <div class="work-modes-kicker">How We Can Work Together · 合作模式</div>
+      <div class="work-modes-grid">
+        <div class="work-mode-card">
+          <span class="work-mode-num">01 · Full-Time Lead</span>
+          <h3>全職主導（遠端／亞太跨區）</h3>
+          <p>擔任 Brand Storytelling、Product Marketing 或 APAC GTM 主導角色；支援台灣遠端，或泰國／日本 Relocation。</p>
+        </div>
+        <div class="work-mode-card">
+          <span class="work-mode-num">02 · 2–4 Week Pilot</span>
+          <h3>2–4 週 GTM 與 SEO/GEO 專案試跑</h3>
+          <p>短期專案試跑，協助重構產品敘事、官網轉換漏斗、AEO/GEO 搜尋能見度或國際展會發表素材。</p>
+        </div>
+        <div class="work-mode-card">
+          <span class="work-mode-num">03 · AI Workflow Setup</span>
+          <h3>AI 內容與工作流建置</h3>
+          <p>為精實團隊建置「人工把關＋AI 生成」的內容與輕量 CRM 工作流，不需龐大編制即可持續產出。</p>
+        </div>
       </div>
     </div>
     <div class="footer-grid">
@@ -941,6 +972,7 @@
           '.experience-intro': '從把技術講成第一線說得出口的話，到設計流程、推動區域 GTM，再到建置 AI 工作流；每一段經歷都在回答同一個問題：怎麼讓人真的願意用。',
           '#skills h2': '能力交集：懂技術、講得清楚、做得出來',
           '#contact h2': '一起聊聊<br>下一個挑戰',
+          '.work-modes-kicker': '合作模式 · How We Can Work Together',
           '.work-cat-planning .category-name': '技術轉譯與產品',
           '.work-cat-planning .work-category-sub': '把新技術講清楚、做出來 · Tech Translation &amp; Product',
           '.work-cat-marketing .category-name': '行銷策劃與 GTM',
@@ -954,17 +986,17 @@
           '.hero-intro .meta-row .num': ['Experience', 'Focus', 'Markets', 'Builds'],
           '.hero-intro .meta-row .val': ['13年 行銷策劃<br>與第一線經驗', '品牌敘事 · GTM<br>產品定位與上市', 'APAC／北美／澳洲<br>跨市場實戰', '自己動手做<br>CRM／AI Agent／App'],
           '.rail-step span': ['技術轉譯', '第一線經營', '區域GTM', '自己動手做', '下一階段'],
-          '.experience-card h3': ['把規格變成第一線說得出口的價值', '讓制度在第一線真正運作', '讓新技術找到第一批採用者', '把同一套方法帶進工業 AI，獨立建立整套行銷體系', '讓台灣做的 AI 產品，被市場聽懂、採用'],
+          '.experience-card h3': ['把規格變成第一線說得出口的價值', '讓制度在第一線真正運作', '讓新技術找到第一批採用者', '把同一套方法帶進工業 AI，獨立建立整套行銷體系', '讓好產品跨出語言與技術門檻，被市場聽懂並採用'],
           '.chapter-org': ['Trainer → Product Marketing Specialist · HTC', 'Store Manager → HR Manager · Elephone ／ Area Manager · T-Shine Case · Australia', 'Product Marketing Manager &amp; Business Development Manager, APAC · HTC', 'AI Technical Marketing Lead · DaoAI Robotics', 'Tech Translation × Product Marketing × Go-to-Market'],
           '.chapter-block h4': ['面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '面對的挑戰', '我獲得什麼', '下一階段'],
-          '.chapter-block p': ['讓複雜科技產品被市場、媒體、通路與消費者正確理解。', '學會把產品規格轉成銷售人員說得出口的賣點，讓功能成為使用情境與客戶利益。', '直接承擔顧客體驗、團隊管理、轉換率與營收結果。', '用數據、流程與團隊協作改善現場執行；制度必須讓第一線記得住、願意做，才會產生結果。', '讓 VR 與元宇宙等新技術，成為東南亞市場、代理商與合作夥伴願意推動的 GTM 方案。', '以代理商經營、在地市場開發與跨部門協作，推動第一批示範者並帶動營收季增40%。', '作為公司唯一的行銷人員，要讓製造業客戶看懂工業 AI 視覺檢測，並在沒有團隊的情況下從策略做到執行。', '把 HTC 讓第一線聽懂產品的方法帶進工業 AI；以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力；把關鍵字「AI AOI」做到 Google 台灣自然搜尋第 2 名並獲 AI 收錄，官網每月帶來 10+ 筆自然詢問。', '我回到台灣，是想投身台灣的 AI 應用產業：把技術轉成產品、讓產品被市場聽懂與採用，並帶向國際市場。'],
+          '.chapter-block p': ['讓複雜科技產品被市場、媒體、通路與消費者正確理解。', '學會把產品規格轉成銷售人員說得出口的賣點，讓功能成為使用情境與客戶利益。', '直接承擔顧客體驗、團隊管理、轉換率與營收結果。', '用數據、流程與團隊協作改善現場執行；制度必須讓第一線記得住、願意做，才會產生結果。', '讓 VR 與元宇宙等新技術，成為東南亞市場、代理商與合作夥伴願意推動的 GTM 方案。', '以代理商經營、在地市場開發與跨部門協作，推動第一批示範者並帶動營收季增40%。', '作為公司唯一的行銷人員，要讓製造業客戶看懂工業 AI 視覺檢測，並在沒有團隊的情況下從策略做到執行。', '把 HTC 讓第一線聽懂產品的方法帶進工業 AI；以自學的 AI 自己做出 CRM 和有人工審核的 AI Agent 補上人力；把關鍵字「AI AOI」做到 Google 台灣自然搜尋第 2 名（截至 2026 年 10 月）並獲 AI 收錄，官網每月帶來 10+ 筆自然詢問。', '聚焦亞太與全球遠端／跨區合作，協助科技與品牌團隊把複雜產品轉譯成清楚的品牌故事、GTM 上市節奏與可落地的 AI 工作流，推向國際市場。'],
           '.future-direction p': ['把 AI 產品的技術講成客戶聽得懂、願意試的價值與使用情境。', '自己動手做工具與原型，從實作理解技術與使用者，讓想法接受驗證。', '從定位、內容到展會與 Inbound，把產品推向台灣與國際市場。'],
           '.cap-title': ['品牌與行銷策略', '技術轉譯與AI實作'],
           '.cap-col-head': ['', ''],
           '.cap-item h4': ['品牌敘事策略', 'GTM在地化執行', '跨文化溝通談判', '產品技術 → 價值敘事', 'Vibe Coding／AI Agent建置', '展場視覺與影片產出'],
           '.cap-item p': [
             '把複雜的技術規格轉成客戶聽得懂、買得下手的故事，讓工程團隊的語言變成業務能用的武器。',
-            '獨立主導亞太（含東南亞）與中國市場的落地執行，從策略制定到素材產出，帶動實際營收成長。',
+            '獨立主導亞太（含東南亞與日本支援）與中國市場的落地執行，從策略制定到素材產出，帶動實際營收成長。',
             '中英雙語，能向電信、代理商與合作夥伴的決策者進行產品與商業提案，也熟悉台灣與中國兩地的溝通與規範差異。',
             '把AI工業檢測系統的技術特徵，轉化為製造業客戶能理解、願意買單的價值敘事。',
             '不是工程師，但能獨立打造CRM系統、具備human-in-the-loop審核機制的LinkedIn發文AI Agent，以及公司官網。',
@@ -977,7 +1009,7 @@
             '個人獨立發起與全端打造的 iPhone AI 陪伴 App。不只建置雙語官方網站，更從 0 到 1 獨立完成完整產品迴圈：以西洋星盤與八字四柱作為對話背景、首創在對話中直接抽偉特塔羅並標記牌面細節解讀、設計每日情緒滾輪與決策歷程追蹤；對話與命盤資料僅存放於使用者本機手機、不拿來訓練模型；落實按 AI 回覆次數計費的階梯式訂閱商業模式。個人獨立完成產品設計與全端開發。',
             '個人獨立發起、以 vibe coding 獨立開發的 AI 飲食助手（已於 2026 年 9 月上架 App Store）。從產品定位、使用者流程到介面與網頁體驗皆獨立完成；使用者拍下或記錄餐點，快速看懂餐食與餐後昏沉、腦霧的關聯並獲得補償建議。定位為個人飲食習慣輔助參考，非醫療診斷或醫材。',
             '作為 DaoAI 唯一的行銷職能，獨立從 0 到 1 建立整套行銷與品牌體系。對外：把工業 AI 視覺檢測轉化為製造業客戶聽得懂的價值敘事，統籌品牌定位、三語官網、Blog、SEO/GEO、APEX 與 InnoVEX 展位視覺設計送印、產品手冊排版與預約頁面；對內：以 AI 工具親手打造內部 CRM 與具備審核機制的 AI Agent 自動化流程。客戶從搜尋看見、主動洽詢到後續跟進，都在同一套流程裡運作。<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">查看 InnoVEX 展會預約落地頁 →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">查看 SkyVision 產品介紹頁 →</a></span>',
-            '為台灣指標性複合開發案「台北雙星」獨立設計的品牌官網概念重塑提案（Concept Redesign Demo）。針對原站資訊架構分散與轉換路徑不明的痛點，重新梳理「雙星願景、頂級商辦、奢華商場、360° 觀景台、雙星脈動」五大核心敘事；導入商辦租賃與商場招商分流漏斗、六鐵共構互動式時間半徑地圖、四語切換及 2026 工程里程碑模組，將地標品牌價值轉化為可執行的數位獲客體驗。<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">造訪概念官網展示 →</a>'
+            '主動發起的概念官網重塑提案（Concept Redesign Demo）：不用等開缺，直接從品牌與使用者視角診斷原站資訊架構分散與轉換斷點，獨立重構「雙星願景、頂級商辦、奢華商場、360° 觀景台、雙星脈動」五大敘事；導入商辦租賃與商場招商分流漏斗、六鐵共構互動式時間半徑地圖、四語切換及 2026 工程里程碑模組。<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">造訪概念官網展示 →</a>'
           ],
           '.impact-list li': [
             '以結構化內容與 SEO/GEO 佈局：將高意圖產業關鍵字 <strong>「AI AOI」做到 Google 台灣自然搜尋第 2 名</strong>（截至 2026 年 10 月仍維持第 2），並<strong>獲生成式 AI 搜尋引擎（AI Overview / Perplexity）主動引用收錄</strong>為權威來源。',
@@ -1002,7 +1034,7 @@
             '主導建立公司網站、部落格與SEO/GEO內容架構，獲得製造與科技大廠主動洽詢',
             '主導APEX IPC 2026與innoVex兩場國際展會的展位視覺設計（含背板輸出），現場接觸指標型潛在客戶',
             '建立技術轉譯工作流，將AI工業檢測系統的複雜技術特徵轉化為製造業客戶易懂的價值敘事',
-            '同時負責台灣與中國雙市場的行銷與產品資料，掌握兩地在地化溝通與內容規範的差異',
+            '同時負責台灣、中國與北美市場的行銷與產品資料，掌握台灣與中國兩地在地化溝通與內容規範的差異',
             '執行市場研究與競品分析，支持產品定位與差異化敘事調整',
             '主導亞太（東南亞）在地化行銷資產與銷售支援工具（Sales Enablement）的策略制定與落地執行，帶動營收季增40%',
             '推動VR／元宇宙解決方案GTM策略，與Hong Kong Cyberport等策略夥伴洽談Ex-EVA馬來西亞VR電競競技場合作，談至實質階段（尚未簽約即離職，後續進度未掌握）',
@@ -1013,7 +1045,7 @@
             '主導製作HTC U12+台灣發表記者會簡報；負責經銷商發表會／記者會現場產品介紹',
             '代表HTC向電信商客戶CEO層級高階主管進行產品簡報與介紹',
             '負責審核台灣官網產品頁資訊；製作門市人員教育訓練宣傳物',
-            '建立銷售指南與競品分析系統，支持第一線銷售與零售團隊'
+            '建立銷售指南、競品分析與智慧型手機市場研究，支援第一線銷售與零售團隊'
           ],
           '.skill-cap-title': ['懂技術・講得清楚', '自己做出來・推上市場'],
           '.skill-cap-item h3': ['快速學懂新技術', '技術價值轉譯', '對不同的人講清楚', '自己動手做產品與工具', '讓客戶主動找上門', '從規劃到成品親手交付'],
@@ -1034,7 +1066,14 @@
             'SEO/GEO', '展會 GTM', 'APAC 在地化', 'LinkedIn 廣告',
             '展位設計', '影片剪輯', '手冊排版', '優先順序判斷'
           ],
-          '.contact-links a': ['寄 Email', 'LinkedIn', 'GitHub']
+          '.contact-links a': ['預約 15 分鐘聊聊 / 專案提案', 'LinkedIn', 'GitHub'],
+          '.work-mode-num': ['01 · Full-Time Lead', '02 · 2–4 Week Pilot', '03 · AI Workflow Setup'],
+          '.work-mode-card h3': ['全職主導（遠端／亞太跨區）', '2–4 週 GTM 與 SEO/GEO 專案試跑', 'AI 內容與工作流建置'],
+          '.work-mode-card p': [
+            '擔任 Brand Storytelling、Product Marketing 或 APAC GTM 主導角色；支援台灣遠端，或泰國／日本 Relocation。',
+            '短期專案試跑，協助重構產品敘事、官網轉換漏斗、AEO/GEO 搜尋能見度或國際展會發表素材。',
+            '為精實團隊建置「人工把關＋AI 生成」的內容與輕量 CRM 工作流，不需龐大編制即可持續產出。'
+          ]
         }
       },
       en: {
@@ -1053,6 +1092,7 @@
           '.experience-intro': 'From making technology easy for frontline teams to explain, to designing processes, leading regional GTM, and building AI workflows—every chapter answers the same question: how do you make people genuinely want to use it?',
           '#skills h2': 'Where It Intersects: Understand Tech, Explain It, Build It',
           '#contact h2': 'Let\'s talk about<br>the next challenge.',
+          '.work-modes-kicker': 'How We Can Work Together',
           '.work-cat-planning .category-name': 'Tech Translation &amp; Product',
           '.work-cat-planning .work-category-sub': 'Explaining new tech clearly, and building it',
           '.work-cat-marketing .category-name': 'Brand, Marketing &amp; GTM',
@@ -1066,17 +1106,17 @@
           '.hero-intro .meta-row .num': ['Experience', 'Focus', 'Markets', 'Builds'],
           '.hero-intro .meta-row .val': ['13 years in marketing<br>&amp; frontline leadership', 'Brand Storytelling &amp; GTM<br>Launch &amp; Positioning', 'APAC / North America / Australia<br>Cross-market execution', 'Hands-on builds<br>CRM / AI Agent / App'],
           '.rail-step span': ['Technical Translation', 'Frontline Operations', 'Regional GTM', 'Hands-On Builds', 'What Comes Next'],
-          '.experience-card h3': ['Turning specifications into frontline value', 'Making systems work on the frontline', 'Finding early adopters for new technology', 'Bringing the same approach to industrial AI, running the marketing function single-handedly', 'Helping AI products built in Taiwan get understood and adopted'],
+          '.experience-card h3': ['Turning specifications into frontline value', 'Making systems work on the frontline', 'Finding early adopters for new technology', 'Bringing the same approach to industrial AI, running the marketing function single-handedly', 'Helping tech &amp; brand teams make complex products understood and adopted across markets'],
           '.chapter-org': ['Trainer → Product Marketing Specialist · HTC', 'Store Manager → HR Manager · Elephone ／ Area Manager · T-Shine Case · Australia', 'Product Marketing Manager &amp; Business Development Manager, APAC · HTC', 'AI Technical Marketing Lead · DaoAI Robotics', 'Tech Translation × Product Marketing × Go-to-Market'],
           '.chapter-block h4': ['The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Challenge', 'What I Gained', 'The Next Stage'],
-          '.chapter-block p': ['Help markets, media, channels, and customers understand complex technology accurately.', 'I learned to turn product specifications into selling points sales teams can say, making features relevant to use cases and customer benefits.', 'Take direct responsibility for customer experience, team performance, conversion, and revenue.', 'I learned that systems only create results when frontline teams can remember them and want to use them.', 'Make emerging VR and metaverse technology into GTM programs that Southeast Asian markets, distributors, and partners would be willing to advance.', 'Used distributor management, local market development, and cross-functional collaboration to activate early adopters, contributing to 40% quarter-over-quarter revenue growth.', 'As the company\'s only marketer, help manufacturing customers understand industrial AI visual inspection, and take marketing from strategy to execution without a team.', 'Brought the approach I used at HTC to help frontline teams understand products into industrial AI; used self-taught AI to build a CRM and an AI Agent with human review to fill the staffing gap; ranked the core keyword "AI AOI" #2 on Google Taiwan organic search with Generative AI citations, bringing in 10+ organic enterprise inquiries per month.', 'I came back to Taiwan to work in its AI application industry: turning technology into products, helping the market understand and adopt them, and taking them to international markets.'],
+          '.chapter-block p': ['Help markets, media, channels, and customers understand complex technology accurately.', 'I learned to turn product specifications into selling points sales teams can say, making features relevant to use cases and customer benefits.', 'Take direct responsibility for customer experience, team performance, conversion, and revenue.', 'I learned that systems only create results when frontline teams can remember them and want to use them.', 'Make emerging VR and metaverse technology into GTM programs that Southeast Asian markets, distributors, and partners would be willing to advance.', 'Used distributor management, local market development, and cross-functional collaboration to activate early adopters, contributing to 40% quarter-over-quarter revenue growth.', 'As the company\'s only marketer, help manufacturing customers understand industrial AI visual inspection, and take marketing from strategy to execution without a team.', 'Brought the approach I used at HTC to help frontline teams understand products into industrial AI; used self-taught AI to build a CRM and an AI Agent with human review to fill the staffing gap; ranked the core keyword "AI AOI" #2 on Google Taiwan organic search (as of Oct 2026) with Generative AI citations, bringing in 10+ organic enterprise inquiries per month.', 'Focused on APAC &amp; global remote or cross-border roles—helping tech and brand teams turn complex products into clear brand storytelling, structured GTM launches, and practical AI workflows.'],
           '.future-direction p': ['Turn AI product capabilities into value and use cases customers understand and want to try.', 'Build tools and prototypes hands-on to understand the technology and users, and put ideas to the test.', 'From positioning and content to trade shows and inbound, take products to Taiwan and international markets.'],
           '.cap-title': ['Brand &amp; Marketing Strategy', 'Technical Translation &amp;<br>AI Execution'],
           '.cap-col-head': ['', ''],
           '.cap-item h4': ['Brand Narrative Strategy', 'Localized GTM Execution', 'Cross-Cultural Communication', 'Product Technology → Value Narrative', 'Vibe Coding / AI Agent Building', 'Trade Show Visuals &amp; Video Production'],
           '.cap-item p': [
             'I turn complex technical specifications into stories customers understand and sales teams can use.',
-            'I have led market execution across APAC, Southeast Asia, and China, from strategy to creative assets that support revenue growth.',
+            'I have led market execution across APAC (including Southeast Asia and Japan) and China, from strategy to creative assets that support revenue growth.',
             'Bilingual in English and Chinese, I work directly with international partners, telecom decision makers, and teams across Taiwan and China.',
             'I translate AI industrial inspection capabilities into value narratives manufacturers can understand and act on.',
             'I am not an engineer, but I can independently build internal CRM systems, human-in-the-loop LinkedIn posting AI Agents, and company websites.',
@@ -1089,7 +1129,7 @@
             'An independent consumer AI product spanning a native iOS app and bilingual landing page. From 0 to 1, I architected the full product loop: integrating Western astrology and BaZi charts as LLM context to ground conversations, designing in-chat Rider-Waite tarot drawing with visual landmark interpretation, and structuring daily mood-naming and decision trackers. Conversation and chart data stay strictly on-device with no model training, paired with a tiered token-based subscription model. Independently designed and built end-to-end.',
             'An independent personal product, developed on my own with vibe coding (launched on the App Store in September 2026). From product positioning and user journey to UI and web development, I executed every layer independently. Users photograph or log meals to understand how food choices correlate with post-meal fatigue or brain fog and receive actionable next-meal guidance. Built as a personal eating-habit reference, not for medical diagnosis or as a medical device.',
             'As the sole marketer at DaoAI, built the entire marketing and brand system from 0 to 1. Externally: translated industrial visual AI into value narratives manufacturing buyers understand, owning brand positioning, trilingual website, blog, SEO/GEO, APEX and InnoVEX booth design to print production, product brochure layout, and booking pages. Internally: hands-on built an internal CRM and a human-in-the-loop AI Agent workflow. From search discovery to inbound inquiry to follow-up, every customer moved through one connected process.<br><span style="display:inline-flex; flex-wrap:wrap; gap:16px; margin-top:8px; font-size:13px; font-weight:600;"><a href="innovex-case-study.html" style="color:#d97706; text-decoration:none;">View InnoVEX Campaign Page →</a><a href="skyvision-case-study.html" style="color:#d97706; text-decoration:none;">View SkyVision Product Page →</a></span>',
-            'An independent concept website and brand narrative redesign demo created for Taipei Twins, a flagship mixed-use landmark in Taiwan. Re-architected fragmented site navigation into five clear pillars—Brand Vision, Premium Office, Luxury Mall, 360° Observatory, and Milestones—paired with dual B2B leasing and retail inquiry funnels, an interactive 6-rail transit time-radius map, 4-language switching, and a 2026 milestone tracker.<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">View Concept Redesign Demo →</a>'
+            'An unsolicited concept website and brand narrative redesign demo for Taipei Twins—built to show how I diagnose fragmented architecture and conversion gaps before being asked. Re-architected into five clear pillars (Brand Vision, Office, Mall, 360° Observatory, Milestones) with dual B2B leasing and retail funnels, an interactive 6-rail transit time-radius map, 4-language switching, and a 2026 milestone tracker.<br><a href="https://taipei-twins.pinpuli1988.workers.dev" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; margin-top:8px; font-weight:600; color:#d97706; text-decoration:none; font-size:13px;">View Concept Redesign Demo →</a>'
           ],
           '.impact-list li': [
             'Architected category-defining content and SEO/GEO structured data: propelled the high-intent keyword <strong>"AI AOI" to #2 organic rank on Google Taiwan</strong> (retained as of Oct 2026) and <strong>earned direct citation in Generative AI engines (AI Overviews, Perplexity)</strong>.',
@@ -1114,7 +1154,7 @@
             'Led the company website, blog, and SEO/GEO content architecture, generating inbound inquiries from manufacturing and technology companies.',
             'Led booth visual design for APEX IPC 2026 and innoVEX, helping the team engage high-value enterprise prospects on site.',
             'Built a technical translation workflow that turns complex AI inspection capabilities into clear value narratives for manufacturers.',
-            'Managed marketing and product materials for Taiwan and China markets, adapting communication to local context and compliance differences.',
+            'Managed marketing and product materials for Taiwan, China, and North America markets, adapting communication to local context and compliance differences between Taiwan and China.',
             'Conducted market research and competitive analysis to support positioning and narrative decisions.',
             'Led APAC and Southeast Asia localized marketing assets and sales enablement execution, driving 40% quarter-over-quarter revenue growth.',
             'Developed VR / metaverse GTM strategy and advanced partnership discussions with Hong Kong Cyberport and Ex-EVA Malaysia for a VR esports arena concept.',
@@ -1125,7 +1165,7 @@
             'Led HTC U12+ Taiwan launch presentation materials and presented products at dealer events and press events.',
             'Represented HTC in product presentations to CEO-level telecom customer stakeholders.',
             'Reviewed Taiwan website product page content and produced retail training materials.',
-            'Built sales guides and competitive analysis systems to support frontline sales and retail teams.'
+            'Built sales guides and ran competitive analysis and smartphone market research to support frontline sales and retail teams.'
           ],
           '.skill-cap-title': ['Understand Tech · Explain It Clearly', 'Build It · Take It to Market'],
           '.skill-cap-item h3': ['Learning New Tech Fast', 'Technical Value Translation', 'Explaining Clearly to Different Audiences', 'Building Products &amp; Tools Hands-On', 'Getting Customers to Come to Us', 'Hands-On, From Plan to Delivery'],
@@ -1146,7 +1186,14 @@
             'SEO/GEO', 'Trade Show GTM', 'APAC Localization', 'LinkedIn Ads',
             'Booth Design', 'Video Editing', 'Brochure Layout', 'Prioritization'
           ],
-          '.contact-links a': ['Email', 'LinkedIn', 'GitHub']
+          '.contact-links a': ['Email for a 15-min Intro / Pilot Brief', 'LinkedIn', 'GitHub'],
+          '.work-mode-num': ['01 · Full-Time Lead', '02 · 2–4 Week Pilot', '03 · AI Workflow Setup'],
+          '.work-mode-card h3': ['Full-Time Lead (Remote / Relocation)', '2–4 Week GTM &amp; SEO/GEO Pilot', 'AI Content &amp; Workflow Setup'],
+          '.work-mode-card p': [
+            'Brand Storytelling, Product Marketing, and APAC GTM for teams hiring Taiwan-eligible remote or relocating to Thailand / Japan.',
+            'Focused sprint to restructure product narrative, conversion funnels, AEO/GEO search visibility, or international trade-show launch assets.',
+            'Build human-in-the-loop AI content pipelines and lightweight internal CRM workflows for lean teams—without hiring a large department.'
+          ]
         }
       }
     };
